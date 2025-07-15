@@ -1,4 +1,4 @@
-# 📊 Análise de Dados do Airbnb - Rio de Janeiro
+# 📊 Análise de Dados Imobiliária
 
 Este projeto realiza uma análise exploratória de dados (EDA) utilizando o dataset com dados de clientes coletados em uma imobiliária, contendo informações sobre renda, o tipo de renda e se o mesmo possui imóvel.
 
