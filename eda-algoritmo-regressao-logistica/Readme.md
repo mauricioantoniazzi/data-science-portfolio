@@ -17,6 +17,7 @@ Este projeto realiza uma análise exploratória de dados (EDA) utilizando o data
 1. **Carregamento e entendimento dos dados**
 2. **Geração de insights a partir de variáveis como renda, Tipo de renda e se possui imovel**
 3. **Criação de visualizações para suporte às conclusões**
+3. **Aplicação do algoritmo de regressão logistica para prever vendas futuras**
 
 ---
 
@@ -58,20 +59,20 @@ Melhoria na tomada de decisão:
  Aumento das vendas:
   - Taxa de Conversão: Ao focar em clientes com maior probabilidade de compra, a imobiliária pode aumentar a taxa de conversão, resultando em mais vendas efetivas.
 
-  - Redução do Ciclo de Vendas: O modelo pode ajudar a identificar rapidamente quais imóveis são mais atraentes para determinados perfis de clientes, acelerando o processo de venda
+  - Redução do Ciclo de Vendas: O modelo pode ajudar a identificar rapidamente quais imóveis são mais atraentes para determinados perfis de clientes, acelerando o processo de venda.
 
  Otimização de recursos:
   - Alocação Eficiente de Recursos: Com informações mais precisas sobre quais clientes são mais propensos a comprar, a imobiliária pode otimizar a alocação de recursos, como tempo de agentes de vendas e orçamento de marketing.
 
-  - Redução de Custos: Focar em leads qualificados pode reduzir os custos associados a campanhas de marketing e vendas, pois menos recursos serão desperdiçados em clientes que não estão interessados
+  - Redução de Custos: Focar em leads qualificados pode reduzir os custos associados a campanhas de marketing e vendas, pois menos recursos serão desperdiçados em clientes que não estão interessados.
 
  Melhoria na satisfação do cliente:
   - Atendimento Personalizado: Compreender melhor as necessidades e preferências dos clientes permite que a imobiliária ofereça um atendimento mais personalizado, aumentando a satisfação do cliente.
 
-  - Construção de Relacionamentos: A personalização e a atenção às necessidades dos clientes podem levar a relacionamentos mais fortes e duradouros, resultando em recomendações e negócios repetidos
+  - Construção de Relacionamentos: A personalização e a atenção às necessidades dos clientes podem levar a relacionamentos mais fortes e duradouros, resultando em recomendações e negócios repetidos.
 
+A adoção de um modelo de aprendizado de máquina para prever a probabilidade de compra de imóveis pode trazer ganhos substanciais para uma imobiliária, incluindo aumento nas vendas, otimização de recursos, melhoria na satisfação do cliente e insights valiosos sobre o mercado. Esses benefícios não apenas ajudam a imobiliária a se destacar em um mercado competitivo, mas também a construir uma base de clientes mais leal e satisfeita.
 
-A adoção de um modelo de aprendizado de máquina para prever a probabilidade de compra de imóveis pode trazer ganhos substanciais para uma imobiliária, incluindo aumento nas vendas, otimização de recursos, melhoria na satisfação do cliente e insights valiosos sobre o mercado. Esses benefícios não apenas ajudam a imobiliária a se destacar em um mercado competitivo, mas também a construir uma base de clientes mais leal e satisfeita
 ---
 
 ## 🛠️ Como Executar
