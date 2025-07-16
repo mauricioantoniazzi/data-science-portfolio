@@ -1,83 +1,76 @@
-# 📊 Análise de Dados Imobiliária
+# 📊 Análise de Dados - Uso de serviços contratado por preço do seguro X idade
 
-Este projeto realiza uma análise exploratória de dados (EDA) utilizando o dataset com dados de clientes coletados em uma imobiliária, contendo informações sobre renda, o tipo de renda e se o mesmo possui imóvel.
+Este projeto realiza uma análise exploratória de dados (EDA) utilizando o dataset com dados de clientes coletados em uma empresa de seguros, contendo informações sobre a idade do cliente, preço do seguro, CEP e tipo de serviço utilizado:
+ - 1: Não utilizou
+ - 2: Usou o serviço
+ - 3: Furto
 
 ---
 
 ## 🗂️ Estrutura do Projeto
 
-- `data/BaseDados_RegressaoLogistica.xlsx` → Dados brutos de clientes cadastrados em uma imobiliária
+- `data/BaseDados_FlorestaDeDecisão.xlsx` → Dados brutos de clientes cadastrados em uma empresa de seguros. O arquivo contem as planilhas Plan1 (dados para treinamento) e a Plan2 (novos dados para prever serviço a ser utilizado)
 - `images/` → Gráficos gerados durante a análise
-- `notebooks/airbnb.ipynb` → Notebook da análise exploratória
+- `notebooks/eda_algoritmo_randon_forest.ipynb` → Notebook da análise exploratória
 
 ---
 
 ## 🔍 Etapas da Análise
 
 1. **Carregamento e entendimento dos dados**
-2. **Geração de insights a partir de variáveis como renda, Tipo de renda e se possui imovel**
+2. **Geração de insights a partir de variáveis como idade, preço do seguro e CEP**
 3. **Criação de visualizações para suporte às conclusões**
-3. **Aplicação do algoritmo de regressão logistica para prever vendas futuras**
+3. **Aplicação do algoritmo de floresta aleatória para prever qual tipo de serviço o cliente será o mais provavel utilizado pelo cliente**
 
 ---
 
 ## 📈 Passos
 
-### 1. Representação gráfica da distribuição dos dados  
-Permite que você visualize como os valores estão distribuídos ao longo de um intervalo.
+### 1. Representação gráfica através de um histograma  
+Em resumo, o gráfico fornece uma visão geral das características demográficas (Idade, CEP) e do comportamento (Preço Seguro, Serviço) dos clientes, revelando padrões e tendências importantes em cada variável.
 
-### 2. Representação gráfica utilizando boxplot visualizando a distribuição dos dados  
- Tipo de renda em relação a renda.
- Possui imóvel relação a renda.
- Comprou? em relação a renda
+### 2. Representação gráfica utilizando boxplot visualizando a distribuição dos dados (serviço X cep)
+ Apresenta um gráfico boxplot que mostra a relação entre a variável "Serviço" (que parece ser categórica, com três categorias: 1, 2 e 3) e a variável "CEP". Cada caixa (boxplot) representa a distribuição dos CEPs para cada tipo de serviço
+
+### 3. Representação gráfica utilizando boxplot visualizando a distribuição dos dados (serviço X idade)  
+ Apresenta um gráfico boxplot que ilustra a relação entre a variável categórica "Serviço" (com as categorias 1, 2 e 3) e a variável numérica "Idade". Ele nos permite comparar a distribuição das idades dos clientes para cada um dos tipos de serviço
+
+### 4. Representação gráfica utilizando boxplot visualizando a distribuição dos dados (serviço X preço do seguro)  
+ Apresenta um gráfico boxplot que mostra a relação entre a variável categórica "Serviço" (com as categorias 1, 2 e 3) e a variável numérica "Preço Seguro". Ele nos permite comparar a distribuição dos preços do seguro para cada um dos tipos de serviço
  
- O boxplot é especialmente útil para identificar a presença de outliers (valores atípicos) e para resumir informações estatísticas importantes sobre os dados. Vamos explorar em detalhes as principais características e utilidades do boxplot.
-
-### 3. Gráfico de Dispersão  
- Foi aplicado o scatterplot para visualização de dados que representa a relação entre as variáveis Renda e se o comprou?, permitindo entender a correlação entre essas variáveis.
-
-
-### 3. Aplicando algoritmo de regressao logistica  
- Foi realizado a separação da base entre as caracteristicas do cliente e a variavel previsor que defini se o cliente comprou ou não o imóvel.
- Foi separado a base entre treinamento e teste, tanto para as caracteristicas quando para a variável previsor em 20% para teste
- Depois de aplicar a regressão logistica foi aplicado o fit para treinar o modelo
- Em seguida foi utilizado o predict no x_teste para validar as previsoes
- Foi utilizado a metrica classification_report para identificar a precisão, recall e acurracy do modelo. Neste modelo tivemos uma acuracia de 0.85, o que significa que 85% das previsões do modelo estavam corretas
- Para testar o modelo foi criado uma nova previsão com valores ficticios e o modelo pode prever se o cliente vai ou não comprar o imóvel
+### 5. Aplicando algoritmo de floresta aleatória  
+ Foi realizado a separação da base entre as caracteristicas do cliente e a variavel previsor que defini o serviço a ser utilizado.
+ Foi separado a base entre treinamento e teste, tanto para as caracteristicas quando para a variável previsor em 30% para teste.
+ Depois de aplicar o algoritmo de floresta aleatória foi aplicado o fit para treinar o modelo.
+ Em seguida foi utilizado o predict no x_teste para validar as previsoes.
+ Foi utilizado a métrica confusion_matrix para descrever o desempenho de um modelo. Neste modelo tivemos uma acuracia de 0.88, o que significa que 88% das previsões do modelo estavam corretas.
+ Para testar o modelo foi criado uma nova previsão com valores ficticios e o modelo pode prever qual tipo de serviço o cliente utilizará.
+ 
+### 6. Mapa de calor  
+ Apresenta um mapa de calor que nos permite visualizar uma Matriz de Confusão. Uma Matriz de Confusão é uma tabela usada para descrever o desempenho de um modelo de classificação em um conjunto de dados onde os valores verdadeiros são conhecidos.
 
 ---
 
 ## ✅ Conclusão
 
-A análise dos dados nos permite visualizar através da entrada de novos clientes, com base nos dados de entrada, se este cliente compraria ou não o imóvel.
+A análise dos dados nos permite visualizar através da entrada de novos clientes, com base nos dados de entrada, qual o tipo de serviço o cliente utilizará.
 
-Melhoria na tomada de decisão:
- - Segmentação de Clientes: O modelo pode ajudar a identificar quais clientes têm maior probabilidade de comprar um imóvel. Isso permite que a imobiliária concentre seus esforços de marketing e vendas em leads mais promissores, aumentando a eficiência das campanhas.
+A empresa possui uma clara segmentação de serviços por perfil de cliente, diferenciando-se por faixas etárias, preços e, em certa medida, localização. O Serviço 1 é para o público mais jovem e consciente do preço, o Serviço 2 para idosos com uma gama variada de preços, e o Serviço 3 é um serviço premium para um público maduro e de regiões mais abastadas.
 
- - Personalização de Ofertas: Com base nas previsões do modelo, a imobiliária pode personalizar as ofertas de imóveis para os clientes, apresentando opções que atendam melhor às suas necessidades e preferências.
+O modelo de classificação (representado pela matriz de confusão) demonstra eficiência na identificação dos clientes do Serviço 1 e do Serviço 3, mas enfrenta dificuldades em classificar corretamente os clientes do Serviço 2. Para melhorar a performance do modelo, seria crucial investigar as características dos clientes do Serviço 2 que estão sendo confundidas com os outros serviços. Isso pode envolver:
+ - Engenharia de features: Criar novas variáveis que ajudem a diferenciar melhor o Serviço 2.
 
- Aumento das vendas:
-  - Taxa de Conversão: Ao focar em clientes com maior probabilidade de compra, a imobiliária pode aumentar a taxa de conversão, resultando em mais vendas efetivas.
+ - Coleta de mais dados: Obter dados adicionais para a Classe 1 que possam ter características mais distintivas.
 
-  - Redução do Ciclo de Vendas: O modelo pode ajudar a identificar rapidamente quais imóveis são mais atraentes para determinados perfis de clientes, acelerando o processo de venda.
+ - Otimização do modelo: Ajustar os parâmetros do modelo ou tentar algoritmos diferentes que lidem melhor com a sobreposição de classes.
 
- Otimização de recursos:
-  - Alocação Eficiente de Recursos: Com informações mais precisas sobre quais clientes são mais propensos a comprar, a imobiliária pode otimizar a alocação de recursos, como tempo de agentes de vendas e orçamento de marketing.
-
-  - Redução de Custos: Focar em leads qualificados pode reduzir os custos associados a campanhas de marketing e vendas, pois menos recursos serão desperdiçados em clientes que não estão interessados.
-
- Melhoria na satisfação do cliente:
-  - Atendimento Personalizado: Compreender melhor as necessidades e preferências dos clientes permite que a imobiliária ofereça um atendimento mais personalizado, aumentando a satisfação do cliente.
-
-  - Construção de Relacionamentos: A personalização e a atenção às necessidades dos clientes podem levar a relacionamentos mais fortes e duradouros, resultando em recomendações e negócios repetidos.
-
-A adoção de um modelo de aprendizado de máquina para prever a probabilidade de compra de imóveis pode trazer ganhos substanciais para uma imobiliária, incluindo aumento nas vendas, otimização de recursos, melhoria na satisfação do cliente e insights valiosos sobre o mercado. Esses benefícios não apenas ajudam a imobiliária a se destacar em um mercado competitivo, mas também a construir uma base de clientes mais leal e satisfeita.
+Em suma, a empresa parece ter uma estratégia de produto e segmentação de mercado bem definida, e a análise preditiva inicial mostra potencial, mas com um ponto de melhoria claro na identificação de um dos segmentos de serviço.
 
 ---
 
 ## 🛠️ Como Executar
 
 ```bash
-git clone https://github.com/seu-usuario/eda-algoritmo-regressao-logistica.git
-cd eda-algoritmo-regressao-logistica
-jupyter notebook notebooks/eda_regressao_logistica.ipynb
+git clone https://github.com/seu-usuario/eda-algoritmo-randon-forest.git
+cd eda-algoritmo-randon-forest
+jupyter notebook notebooks/eda_algoritmo_randon_forest.ipynb
