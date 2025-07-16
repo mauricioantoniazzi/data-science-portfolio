@@ -1,6 +1,6 @@
 # 📊 Análise de Dados Imobiliária
 
-Este projeto realiza uma análise exploratória de dados (EDA) utilizando o dataset com dados de clientes coletados em uma imobiliária, contendo informações sobre renda, o tipo de renda e se o mesmo possui imóvel.
+Este projeto realiza uma análise exploratória de dados (EDA) utilizando o dataset com dados de clientes coletados em uma imobiliária, contendo informações sobre renda, o tipo de renda e se o mesmo possui imóvel. Quero fazer uma previsão para saber, com base nos dados do cliente se ele tem probabilidade de comprar ou não um imóvel.
 
 ---
 
@@ -8,7 +8,7 @@ Este projeto realiza uma análise exploratória de dados (EDA) utilizando o data
 
 - `data/BaseDados_RegressaoLogistica.xlsx` → Dados brutos de clientes cadastrados em uma imobiliária
 - `images/` → Gráficos gerados durante a análise
-- `notebooks/airbnb.ipynb` → Notebook da análise exploratória
+- `notebooks/eda_regressao_logistica.ipynb` → Notebook da análise exploratória
 
 ---
 
