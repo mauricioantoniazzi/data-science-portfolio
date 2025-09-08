@@ -1,8 +1,10 @@
-Análise de Vendas - Dashboard de Desempenho
+📊 Análise de Vendas - Dashboard de Desempenho
 Este projeto consiste em um dashboard interativo de análise de vendas, desenvolvido no Power BI Desktop, com o objetivo de fornecer uma visão detalhada do desempenho comercial e identificar os principais fatores de influência nas vendas.
 
-1. Problema e Objetivo
-O objetivo principal deste projeto é transformar dados brutos de vendas em insights estratégicos para tomada de decisões. O dashboard foi construído para responder a perguntas-chave como:
+Este projeto foi desenvolvido como parte de um estudo prático do curso do site Data Science Academy, focado em análise de dados e Business Intelligence.
+
+🎯 Objetivo do Projeto
+O objetivo principal deste dashboard é transformar dados brutos de vendas em insights estratégicos para tomada de decisões. O painel foi construído para responder a perguntas-chave, como:
 
 Quais produtos, segmentos e fabricantes impulsionam as vendas?
 
@@ -10,9 +12,7 @@ Qual o desempenho de vendas por categoria, loja e vendedor?
 
 Quais são os principais fatores que influenciam o aumento ou a diminuição do valor das vendas?
 
-Para isso, o projeto explora recursos avançados do Power BI, como Narrativa Inteligente, Análise de Principais Influenciadores e Gráficos de Faixas.
-
-2. Fonte de Dados
+💾 Fonte de Dados
 Os dados utilizados neste projeto são fictícios e foram fornecidos em uma tabela simples. A base de dados contém informações sobre:
 
 Vendas: ValorVenda, Custo, Comissão
@@ -25,8 +25,8 @@ Localização: Cidade, Estado, Loja
 
 Vendedores: Vendedor
 
-3. Principais Análises e Descobertas
-O dashboard é composto por várias visualizações que oferecem uma análise multifacetada dos dados de vendas.
+✨ Principais Análises e Descobertas
+O dashboard é composto por diversas visualizações que oferecem uma análise multifacetada dos dados de vendas.
 
 Narrativa Inteligente: Fornece um resumo dinâmico das informações, com destaque para o Valor Total de Vendas por Segmento, por Fabricantes e por Categoria, facilitando a identificação rápida das maiores e menores participações.
 
@@ -36,11 +36,11 @@ Principais Influenciadores: Usa a inteligência artificial do Power BI para expo
 
 Mapa: Visualiza o Total do Valor de Venda por Estado e Vendedor, permitindo uma análise geoespacial do desempenho e a identificação de áreas de alta concentração de vendas.
 
-4. Tecnologias e Recursos Utilizados
+🛠️ Tecnologias e Recursos Utilizados
 Power BI Desktop: Ferramenta principal para modelagem, visualização e criação do dashboard.
 
 Power Query: Utilizado para carregar a fonte de dados e realizar transformações e limpezas simples.
 
-Linguagem DAX: Utilizada para criar medidas e agregar informações, embora o foco principal do projeto seja a visualização e a exploração dos recursos nativos.
-
 Recursos Avançados: O projeto utiliza funcionalidades de Análise de IA do Power BI, como Narrativa Inteligente e Principais Influenciadores.
+
+Observação: Neste primeiro projeto, o foco foi na exploração dos recursos de visualização e análise do Power BI. A criação de medidas e colunas calculadas com DAX não foi utilizada, demonstrando a capacidade da ferramenta de gerar insights poderosos mesmo sem o uso de código complexo.
