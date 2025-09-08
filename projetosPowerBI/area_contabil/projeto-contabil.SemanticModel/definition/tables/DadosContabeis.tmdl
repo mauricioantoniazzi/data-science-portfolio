@@ -1,0 +1,74 @@
+table DadosContabeis
+	lineageTag: 05b641c4-f2fc-4af1-a782-7eafb61a4a56
+
+	column ID_Conta
+		dataType: int64
+		formatString: 0
+		lineageTag: f278c871-948b-4aa5-a9ba-ce2a33fccb7c
+		summarizeBy: none
+		sourceColumn: ID_Conta
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano_2019
+		dataType: int64
+		formatString: 0
+		lineageTag: 96afe771-0119-41a9-a776-b1808b1d30ef
+		summarizeBy: sum
+		sourceColumn: Ano_2019
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano_2020
+		dataType: double
+		lineageTag: 4244f43f-06cd-42a9-b0f8-ef8742b8f923
+		summarizeBy: sum
+		sourceColumn: Ano_2020
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Ano_2021
+		dataType: double
+		lineageTag: e91a17a2-59a2-4cd1-8e53-62206f348e63
+		summarizeBy: sum
+		sourceColumn: Ano_2021
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Ano_2022
+		dataType: double
+		lineageTag: 0132d02b-1817-441e-8064-f2d253b54338
+		summarizeBy: sum
+		sourceColumn: Ano_2022
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Ano_2023
+		dataType: double
+		lineageTag: a4db9be8-7604-4d68-a274-408cffaea206
+		summarizeBy: sum
+		sourceColumn: Ano_2023
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition DadosContabeis = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\mdant\OneDrive\Documents\Estudo Power BI\DataScienceAcademy\Mini-Projetos\área-contabil\Dataset.xlsx"), null, true),
+				    DadosContabeis_Sheet = Fonte{[Item="DadosContabeis",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(DadosContabeis_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"ID_Conta", Int64.Type}, {"Ano_2019", Int64.Type}, {"Ano_2020", type number}, {"Ano_2021", type number}, {"Ano_2022", type number}, {"Ano_2023", type number}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "projeto-contabil"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d0b852a1-0894-4abd-9ce0-b05628b985fb"
+  }
+}
