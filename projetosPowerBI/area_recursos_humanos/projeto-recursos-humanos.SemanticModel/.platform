@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "projeto-recursos-humanos"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "97d741c7-bb70-40e3-b976-d6e002bef7bd"
+  }
+}
