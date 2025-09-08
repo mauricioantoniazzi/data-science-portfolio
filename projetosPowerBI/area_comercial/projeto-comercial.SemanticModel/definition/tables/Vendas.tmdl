@@ -1,0 +1,142 @@
+table Vendas
+	lineageTag: 9009dd59-6640-4ffa-b8b6-31306cbe9597
+
+	column ID-Produto
+		dataType: string
+		lineageTag: f1655075-c800-41a9-a9f4-b20299596db6
+		summarizeBy: none
+		sourceColumn: ID-Produto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Produto
+		dataType: string
+		lineageTag: d8ca5f8c-cc9b-41d3-9310-490899154981
+		summarizeBy: none
+		sourceColumn: Produto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Categoria
+		dataType: string
+		lineageTag: 06462cf5-637c-4184-ae2e-4c720beab97a
+		summarizeBy: none
+		sourceColumn: Categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column Segmento
+		dataType: string
+		lineageTag: 8daa6772-dc00-4f95-ac9e-6095c9dfd9fb
+		summarizeBy: none
+		sourceColumn: Segmento
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fabricantes
+		dataType: string
+		lineageTag: 62070c86-2072-4c64-8174-9024ed305a5d
+		summarizeBy: none
+		sourceColumn: Fabricantes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Loja
+		dataType: string
+		lineageTag: 5e88b5a1-0af6-48c7-9388-043e37d17d7d
+		summarizeBy: none
+		sourceColumn: Loja
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cidade
+		dataType: string
+		lineageTag: c1361b2d-61e7-4789-b21c-a288b2189d77
+		summarizeBy: none
+		sourceColumn: Cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column Estado
+		dataType: string
+		lineageTag: 091f1479-8343-4218-92b6-474ec01d18fb
+		summarizeBy: none
+		sourceColumn: Estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column Vendedor
+		dataType: string
+		lineageTag: 487fd3fa-a35b-44e6-aa4d-cb10f8def74d
+		summarizeBy: none
+		sourceColumn: Vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID-Vendedor
+		dataType: int64
+		formatString: 0
+		lineageTag: c453a13a-0e8c-476d-a607-dfacb5166cdd
+		summarizeBy: sum
+		sourceColumn: ID-Vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Comissão (Percentual)'
+		dataType: int64
+		formatString: 0
+		lineageTag: fbf674b9-0d17-406c-9ab3-57eef3456f55
+		summarizeBy: sum
+		sourceColumn: Comissão (Percentual)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Venda'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a0a8abae-5e78-46f1-b646-490c0f987099
+		summarizeBy: none
+		sourceColumn: Data Venda
+
+		variation Variation
+			isDefault
+			relationship: 523938c4-b81b-4efd-9d66-b3cea526f83b
+			defaultHierarchy: LocalDateTable_a5d6adb0-718e-4b24-840d-517d16c70419.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ValorVenda
+		dataType: double
+		lineageTag: b00e4eb2-9135-4ad7-b128-3bcd360369c8
+		summarizeBy: sum
+		sourceColumn: ValorVenda
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Custo
+		dataType: int64
+		formatString: 0
+		lineageTag: 411fdea3-fef9-49b2-8a3e-a62b6d5fe424
+		summarizeBy: sum
+		sourceColumn: Custo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Vendas = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\mdant\OneDrive\Documents\Estudo Power BI\DataScienceAcademy\Mini-Projetos\área-comercial\Dados_Comerciais.xlsx"), null, true),
+				    Vendas_Sheet = Fonte{[Item="Vendas",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Vendas_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"ID-Produto", type text}, {"Produto", type text}, {"Categoria", type text}, {"Segmento", type text}, {"Fabricante", type text}, {"Loja", type text}, {"Cidade", type text}, {"Estado", type text}, {"Vendedor", type text}, {"ID-Vendedor", Int64.Type}, {"Comissão (Percentual)", Int64.Type}, {"Data Venda", type date}, {"ValorVenda", type number}, {"Custo", Int64.Type}}),
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Tipo Alterado",{{"Fabricante", "Fabricantes"}})
+				in
+				    #"Colunas Renomeadas"
+
+	annotation PBI_ResultType = Table
+
