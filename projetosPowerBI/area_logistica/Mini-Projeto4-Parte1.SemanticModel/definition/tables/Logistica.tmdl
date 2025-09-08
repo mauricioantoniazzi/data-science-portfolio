@@ -1,0 +1,134 @@
+table Logistica
+	lineageTag: f91b0ff8-841b-4244-a0fc-02dbe722bfea
+
+	column ID_Pedido
+		dataType: int64
+		formatString: 0
+		lineageTag: a5129110-8998-4aa6-afc2-35e90a5ba5ff
+		summarizeBy: sum
+		sourceColumn: ID_Pedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_Vendedor
+		dataType: int64
+		formatString: 0
+		lineageTag: 8d715577-0690-4845-a23e-63b2166d0065
+		summarizeBy: sum
+		sourceColumn: ID_Vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_Cliente
+		dataType: int64
+		formatString: 0
+		lineageTag: 9f52ad22-5972-401e-8c55-c8707f7bc858
+		summarizeBy: sum
+		sourceColumn: ID_Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Equipe_Entrega
+		dataType: string
+		lineageTag: c191f3f7-6d6e-4e1d-aec2-b4cbf214e132
+		summarizeBy: none
+		sourceColumn: Equipe_Entrega
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cliente
+		dataType: string
+		lineageTag: 1f782248-d8dc-41eb-9ee6-8568bf7d86e0
+		summarizeBy: none
+		sourceColumn: Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Canal_Entrega
+		dataType: string
+		lineageTag: 65207417-cc08-40af-9041-60bf2f76ec94
+		summarizeBy: none
+		sourceColumn: Canal_Entrega
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_Cidade
+		dataType: int64
+		formatString: 0
+		lineageTag: 144bd832-5aaf-4036-b8d5-1a02c91ff76b
+		summarizeBy: sum
+		sourceColumn: ID_Cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column Data_Pedido
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4fd5474c-02f2-4838-a981-96182dbb85ad
+		summarizeBy: none
+		sourceColumn: Data_Pedido
+
+		variation Variation
+			isDefault
+			relationship: 3c0f5c0a-e764-4785-abbe-a1fa1089910d
+			defaultHierarchy: LocalDateTable_b242d0fc-0bb0-4e8a-ac6d-87af50b4abc3.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Data_Entrega_Prevista
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 259f7b8c-2c72-4a41-8e9e-6857b0eb149d
+		summarizeBy: none
+		sourceColumn: Data_Entrega_Prevista
+
+		variation Variation
+			isDefault
+			relationship: cab135e0-b862-4161-b604-b30b2bacd018
+			defaultHierarchy: LocalDateTable_8ee67578-66e1-4975-8f1a-6bb257315774.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Data_Entrega_Realizada
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 2abdfd96-1c04-4f87-a69c-48b840b7094f
+		summarizeBy: none
+		sourceColumn: Data_Entrega_Realizada
+
+		variation Variation
+			isDefault
+			relationship: 9ae71e50-1d8b-40f3-b7df-cc3dc00a2212
+			defaultHierarchy: LocalDateTable_12119956-9ea9-41e6-b919-dd21b7999d11.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Status_Entrega
+		dataType: string
+		lineageTag: f0952128-b600-4bb7-ab93-3bdb0d0788d9
+		summarizeBy: none
+		sourceColumn: Status_Entrega
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Logistica-546d2021-1660-4970-a644-907eb80eb78c = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\mdant\OneDrive\Documents\Estudo Power BI\DataScienceAcademy\Mini-Projetos\área-logistica\dataset.xlsx"), null, true),
+				    Logistica_Sheet = Fonte{[Item="Logistica",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Logistica_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"ID_Pedido", Int64.Type}, {"ID_Vendedor", Int64.Type}, {"ID_Cliente", Int64.Type}, {"Equipe_Entrega", type text}, {"Cliente", type text}, {"Canal_Entrega", type text}, {"ID_Cidade", Int64.Type}, {"Data_Pedido", type date}, {"Data_Entrega_Prevista", type date}, {"Data_Entrega_Realizada", type date}, {"Status_Entrega", type text}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
+

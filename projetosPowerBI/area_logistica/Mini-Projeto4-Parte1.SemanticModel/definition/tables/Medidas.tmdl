@@ -1,0 +1,67 @@
+table Medidas
+	lineageTag: fe8b41d7-44b1-4cd8-b163-f49615af244c
+
+	measure 'Total Entregas' = COUNTROWS(Logistica)
+		formatString: 0
+		lineageTag: ebd61d25-a167-41c3-aa2a-8cd1098259f7
+
+	measure Rating =
+			
+			VAR __MAX_NUMBER_OF_STARS = 5
+			VAR __MIN_RATED_VALUE = 1500
+			VAR __MAX_RATED_VALUE = 2500
+			VAR __BASE_VALUE = [Total Entregas]
+			VAR __NORMALIZED_BASE_VALUE =
+				MIN(
+					MAX(
+						DIVIDE(
+							__BASE_VALUE - __MIN_RATED_VALUE,
+							__MAX_RATED_VALUE - __MIN_RATED_VALUE
+						),
+						0
+					),
+					1
+				)
+			VAR __STAR_RATING = ROUND(__NORMALIZED_BASE_VALUE * __MAX_NUMBER_OF_STARS, 0)
+			RETURN
+				IF(
+					NOT ISBLANK(__BASE_VALUE),
+					REPT(UNICHAR(9733), __STAR_RATING)
+						& REPT(UNICHAR(9734), __MAX_NUMBER_OF_STARS - __STAR_RATING)
+				)
+		lineageTag: 80c60dad-14c1-46e0-987d-0d0e8a761b71
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "StarRating"
+				}
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure TotalEntregasPrazo =
+			CALCULATE(
+			     [Total Entregas],
+			     FILTER(
+			        Logistica,
+			        Logistica[Status_Entrega] = "Antecipado"  ||
+			        Logistica[Status_Entrega] = "No Prazo"
+			     )
+			)
+		formatString: 0
+		lineageTag: bcb28eae-7160-4ebe-ad04-2690f052d9c0
+
+	partition Medidas = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+

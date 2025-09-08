@@ -1,0 +1,8 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../Mini-Projeto4-Parte1.SemanticModel"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+relationship 3c0f5c0a-e764-4785-abbe-a1fa1089910d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Logistica.Data_Pedido
+	toColumn: LocalDateTable_b242d0fc-0bb0-4e8a-ac6d-87af50b4abc3.Date
+
+relationship cab135e0-b862-4161-b604-b30b2bacd018
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Logistica.Data_Entrega_Prevista
+	toColumn: LocalDateTable_8ee67578-66e1-4975-8f1a-6bb257315774.Date
+
+relationship 9ae71e50-1d8b-40f3-b7df-cc3dc00a2212
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Logistica.Data_Entrega_Realizada
+	toColumn: LocalDateTable_12119956-9ea9-41e6-b919-dd21b7999d11.Date
+
