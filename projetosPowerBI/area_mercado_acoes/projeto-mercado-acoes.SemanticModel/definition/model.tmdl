@@ -1,0 +1,22 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["StockMarket"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.146.1254.0 (25.08)+791a7518fadc83da883d79322a2658aff57c8db3
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table StockMarket
+ref table DateTableTemplate_e5aba418-6c40-44f5-887c-c80fd98f6b8e
+ref table LocalDateTable_8e837f16-d36f-423c-92d6-0231774ac3cb
+
+ref cultureInfo pt-BR
+
