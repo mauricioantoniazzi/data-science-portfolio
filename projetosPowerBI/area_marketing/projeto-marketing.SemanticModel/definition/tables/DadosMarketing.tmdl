@@ -1,0 +1,272 @@
+table DadosMarketing
+	lineageTag: 78fb1ec7-7c28-44e9-a89e-d283c37f0090
+
+	measure TotalGasto = SUMX(DadosMarketing, DadosMarketing[Gasto com Alimentos] + DadosMarketing[Gasto com Brinquedos] + DadosMarketing[Gasto com Eletronicos] + DadosMarketing[Gasto com Moveis] + DadosMarketing[Gasto com Utilidades] + DadosMarketing[Gasto com Vestuario])
+		formatString: 0
+		lineageTag: 675f49b3-433e-4a5d-b7c0-55dab404e32d
+
+	column ID
+		dataType: int64
+		formatString: 0
+		lineageTag: b717a662-92d6-49a4-bcdc-3e45c55ded63
+		summarizeBy: count
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ano Nascimento'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3b657d09-fc63-454a-a499-fec225c7a0b7
+		summarizeBy: sum
+		sourceColumn: Ano Nascimento
+
+		annotation SummarizationSetBy = Automatic
+
+	column Escolaridade
+		dataType: string
+		lineageTag: b72512c9-24e3-4151-8b7f-a04b50dff64d
+		summarizeBy: none
+		sourceColumn: Escolaridade
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Estado Civil'
+		dataType: string
+		lineageTag: 8ded48f9-1320-45d5-b77d-b5f1ee202156
+		summarizeBy: none
+		sourceColumn: Estado Civil
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Salario Anual'
+		dataType: int64
+		formatString: 0
+		lineageTag: 92c05e70-b5f1-4364-a684-8c40eec8db8f
+		summarizeBy: sum
+		sourceColumn: Salario Anual
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Filhos em Casa'
+		dataType: int64
+		formatString: 0
+		lineageTag: 8c6bcc46-d3a3-427d-a66d-ddd352c9b9ff
+		summarizeBy: sum
+		sourceColumn: Filhos em Casa
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Adolescentes em Casa'
+		dataType: int64
+		formatString: 0
+		lineageTag: feb92744-3afe-4e3b-8c1b-d6a0f08ec636
+		summarizeBy: sum
+		sourceColumn: Adolescentes em Casa
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Cadastro'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 58bc53dd-ab5d-492b-8139-35431504d17a
+		summarizeBy: none
+		sourceColumn: Data Cadastro
+
+		variation Variation
+			isDefault
+			relationship: 57880680-4ced-4c64-9485-71f84861d660
+			defaultHierarchy: LocalDateTable_28ee0a8b-0392-465d-ad5e-7cba847fa328.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Dias Desde Ultima Compra'
+		dataType: int64
+		formatString: 0
+		lineageTag: c0dbec05-2b58-485f-b705-e709bb581f51
+		summarizeBy: sum
+		sourceColumn: Dias Desde Ultima Compra
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gasto com Eletronicos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7b8bc7bc-7f75-4977-9213-ef1976f3c569
+		summarizeBy: sum
+		sourceColumn: Gasto com Eletronicos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gasto com Brinquedos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 71d72774-153b-4e56-bea5-d9a9924bfab3
+		summarizeBy: sum
+		sourceColumn: Gasto com Brinquedos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gasto com Moveis'
+		dataType: int64
+		formatString: 0
+		lineageTag: 77bf6518-a571-4ce3-9571-e9e0cc749958
+		summarizeBy: sum
+		sourceColumn: Gasto com Moveis
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gasto com Utilidades'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4de6628c-a8a8-4dc3-b21e-8488dd51dc60
+		summarizeBy: sum
+		sourceColumn: Gasto com Utilidades
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gasto com Alimentos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 96cada92-cfca-443a-8c3d-a692479f2e15
+		summarizeBy: sum
+		sourceColumn: Gasto com Alimentos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gasto com Vestuario'
+		dataType: int64
+		formatString: 0
+		lineageTag: 79b12f47-e473-43f4-b675-a555f03ee481
+		summarizeBy: sum
+		sourceColumn: Gasto com Vestuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numero de Compras com Desconto'
+		dataType: int64
+		formatString: 0
+		lineageTag: a30dbf26-ce0d-417d-92ac-e9fd0d14a1cf
+		summarizeBy: sum
+		sourceColumn: Numero de Compras com Desconto
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numero de Compras na Web'
+		dataType: int64
+		formatString: 0
+		lineageTag: fa4d38a3-88c7-4064-bddd-f2642b40bc34
+		summarizeBy: sum
+		sourceColumn: Numero de Compras na Web
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numero de Compras via Catalogo'
+		dataType: int64
+		formatString: 0
+		lineageTag: 11700378-6796-496c-864d-f26ba5d67ada
+		summarizeBy: sum
+		sourceColumn: Numero de Compras via Catalogo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numero de Compras na Loja'
+		dataType: int64
+		formatString: 0
+		lineageTag: ba7531ca-da11-4c6e-90c0-f6689f1bdf2d
+		summarizeBy: sum
+		sourceColumn: Numero de Compras na Loja
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numero Visitas WebSite Mes'
+		dataType: int64
+		formatString: 0
+		lineageTag: 40dc0a58-4a25-4ca5-85b9-0421484e9e70
+		summarizeBy: sum
+		sourceColumn: Numero Visitas WebSite Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Compra na Campanha 1'
+		dataType: int64
+		formatString: 0
+		lineageTag: 92a6413b-2a65-44e1-a06f-606caa155403
+		summarizeBy: sum
+		sourceColumn: Compra na Campanha 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Compra na Campanha 2'
+		dataType: int64
+		formatString: 0
+		lineageTag: 21e2fb10-dc1a-450c-883d-03a5f2886c53
+		summarizeBy: sum
+		sourceColumn: Compra na Campanha 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Compra na Campanha 3'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7c47b723-401c-4293-8428-0c9290454d81
+		summarizeBy: sum
+		sourceColumn: Compra na Campanha 3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Compra na Campanha 4'
+		dataType: int64
+		formatString: 0
+		lineageTag: 260d70ae-c0a7-400e-b61c-47ec0357b7de
+		summarizeBy: sum
+		sourceColumn: Compra na Campanha 4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Compra na Campanha 5'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9dd02c1b-7134-430c-b24b-1dc40ccff197
+		summarizeBy: sum
+		sourceColumn: Compra na Campanha 5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comprou
+		dataType: string
+		lineageTag: b9aa693f-389d-44b0-b82f-914ab8cbd080
+		summarizeBy: none
+		sourceColumn: Comprou
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pais
+		dataType: string
+		lineageTag: 96beafb1-1460-449b-920f-95898457c7a5
+		summarizeBy: none
+		sourceColumn: Pais
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DadosMarketing = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\mdant\OneDrive\Documents\Estudo Power BI\DataScienceAcademy\Min-Projeto1\dados_marketing.csv"),[Delimiter=";", Columns=27, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"ID", Int64.Type}, {"Ano Nascimento", Int64.Type}, {"Escolaridade", type text}, {"Estado Civil", type text}, {"Salario Anual", Int64.Type}, {"Filhos em Casa", Int64.Type}, {"Adolescentes em Casa", Int64.Type}, {"Data Cadastro", type date}, {"Dias Desde Ultima Compra", Int64.Type}, {"Gasto com Eletronicos", Int64.Type}, {"Gasto com Brinquedos", Int64.Type}, {"Gasto com Moveis", Int64.Type}, {"Gasto com Utilidades", Int64.Type}, {"Gasto com Alimentos", Int64.Type}, {"Gasto com Vestuario", Int64.Type}, {"Numero de Compras com Desconto", Int64.Type}, {"Numero de Compras na Web", Int64.Type}, {"Numero de Compras via Catalogo", Int64.Type}, {"Numero de Compras na Loja", Int64.Type}, {"Numero Visitas WebSite Mes", Int64.Type}, {"Compra na Campanha 1", Int64.Type}, {"Compra na Campanha 2", Int64.Type}, {"Compra na Campanha 3", Int64.Type}, {"Compra na Campanha 4", Int64.Type}, {"Compra na Campanha 5", Int64.Type}, {"Comprou", Int64.Type}, {"Pais", type text}}),
+				    #"Linhas Classificadas" = Table.Sort(#"Tipo Alterado",{{"Salario Anual", Order.Descending}}),
+				    #"Linhas Superiores Removidas" = Table.Skip(#"Linhas Classificadas",1),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Linhas Superiores Removidas",{{"Comprou", type text}}),
+				    #"Valor Substituído" = Table.ReplaceValue(#"Tipo Alterado1","1","Sim",Replacer.ReplaceText,{"Comprou"}),
+				    #"Valor Substituído1" = Table.ReplaceValue(#"Valor Substituído","0","Não",Replacer.ReplaceText,{"Comprou"})
+				in
+				    #"Valor Substituído1"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
+
