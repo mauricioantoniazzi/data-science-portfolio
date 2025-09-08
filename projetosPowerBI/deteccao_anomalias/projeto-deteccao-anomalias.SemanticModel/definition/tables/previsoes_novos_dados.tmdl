@@ -1,0 +1,60 @@
+table previsoes_novos_dados
+	lineageTag: eab14657-575d-4752-90ce-c70abcbb2ac0
+
+	column Column1
+		dataType: string
+		lineageTag: 49f9cb88-126a-4d43-9e8b-91365386457a
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column id
+		dataType: string
+		lineageTag: e5009e09-1ac2-4935-980b-19148d04ca3a
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column average_depth
+		dataType: string
+		lineageTag: 755c45f1-b49a-4729-8ce5-0a9fbd19bc31
+		summarizeBy: none
+		sourceColumn: average_depth
+
+		annotation SummarizationSetBy = Automatic
+
+	column anomaly_score
+		dataType: double
+		lineageTag: a1c76d37-56d7-4700-9c06-3ea2e278c212
+		summarizeBy: sum
+		sourceColumn: anomaly_score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column status
+		dataType: string
+		lineageTag: 8d4052bf-e325-46fa-8551-0b685f2a8871
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition previsoes_novos_dados = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\mdant\OneDrive\Documents\EstudoPowerBI\DataScienceAcademy\Cap17\previsoes_novos_dados.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Alterar Tipo" = Table.TransformColumnTypes(Fonte,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}}),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Alterar Tipo", [PromoteAllScalars=true]),
+				    #"Tipo Alterado com Localidade" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos", {{"anomaly_score", type number}}, "en-US")
+				in
+				    #"Tipo Alterado com Localidade"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
+

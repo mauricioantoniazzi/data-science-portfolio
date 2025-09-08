@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "projeto-deteccao-anomalias"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "35bce74a-1d3f-41ee-a5f5-ba29a676b62f"
+  }
+}
