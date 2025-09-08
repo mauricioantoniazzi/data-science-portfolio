@@ -1,0 +1,5 @@
+relationship 79578736-d245-4b5d-8d17-5e406d3f72c6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Producao.Período
+	toColumn: LocalDateTable_98823c21-4aae-4444-a4b2-94e1affd26fb.Date
+

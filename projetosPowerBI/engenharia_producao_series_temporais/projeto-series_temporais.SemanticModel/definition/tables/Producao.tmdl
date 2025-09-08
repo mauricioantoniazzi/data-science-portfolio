@@ -1,0 +1,99 @@
+table Producao
+	lineageTag: 4d871355-e415-40e0-a54a-592d4e078ca7
+
+	measure 'Média móvel de Soma de Total Unidades Produzidas' =
+			
+			IF(
+				ISFILTERED('Producao'[Período]),
+				ERROR("Medidas rápidas de inteligência de tempo somente podem ser agrupadas ou filtradas pela hierarquia de data fornecida pelo Power BI ou pela coluna de data primária."),
+				VAR __LAST_DATE = ENDOFMONTH('Producao'[Período].[Date])
+				VAR __DATE_PERIOD =
+					DATESBETWEEN(
+						'Producao'[Período].[Date],
+						STARTOFMONTH(DATEADD(__LAST_DATE, -2, MONTH)),
+						ENDOFMONTH(DATEADD(__LAST_DATE, 2, MONTH))
+					)
+				RETURN
+					AVERAGEX(
+						CALCULATETABLE(
+							SUMMARIZE(
+								VALUES('Producao'),
+								'Producao'[Período].[Ano],
+								'Producao'[Período].[QuarterNo],
+								'Producao'[Período].[Trimestre],
+								'Producao'[Período].[MonthNo],
+								'Producao'[Período].[Mês]
+							),
+							__DATE_PERIOD
+						),
+						CALCULATE(
+							SUM('Producao'[Total Unidades Produzidas]),
+							ALL('Producao'[Período].[Dia])
+						)
+					)
+			)
+		formatString: 0
+		lineageTag: 653598b9-72e0-46fb-91f5-0895ffe473bd
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "RollingAverage"
+				}
+
+		changedProperty = FormatString
+
+	column Período
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c297b7d6-e100-4112-97ac-5d245f3caa40
+		summarizeBy: none
+		sourceColumn: Período
+
+		variation Variation
+			isDefault
+			relationship: 79578736-d245-4b5d-8d17-5e406d3f72c6
+			defaultHierarchy: LocalDateTable_98823c21-4aae-4444-a4b2-94e1affd26fb.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Turno
+		dataType: string
+		lineageTag: da58724c-d0e9-4502-8396-6558b4939935
+		summarizeBy: none
+		sourceColumn: Turno
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Range Idade Funcionários'
+		dataType: string
+		lineageTag: 33032939-f120-4d88-b95b-b22160b8930d
+		summarizeBy: none
+		sourceColumn: Range Idade Funcionários
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Unidades Produzidas'
+		dataType: int64
+		formatString: 0
+		lineageTag: f09f0bf2-8d95-41cc-8bf6-6d6a0d2b6532
+		summarizeBy: sum
+		sourceColumn: Total Unidades Produzidas
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Producao = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\mdant\OneDrive\Documents\EstudoPowerBI\DataScienceAcademy\Cap18\Producao-2018-2023.xlsx"), null, true),
+				    Producao_Sheet = Fonte{[Item="Producao",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Producao_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Período", type date}, {"Turno", type text}, {"Range Idade Funcionários", type text}, {"Total Unidades Produzidas", Int64.Type}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,141 @@
+{
+  "config": "{\"version\":\"5.66\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"type\":2,\"version\":{\"visual\":\"1.8.95\",\"report\":\"2.0.95\",\"page\":\"1.3.95\"}}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Dashboard",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "5e008bb2646280c93783",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1c1a09002088f6947a43\",\"layouts\":[{\"id\":0,\"position\":{\"x\":875.977653631285,\"y\":100.11173184357543,\"z\":3000,\"width\":389.7206703910615,\"height\":353.9664804469274,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Producao.Período.Variation.Hierarquia de datas.Ano\",\"active\":true},{\"queryRef\":\"Producao.Período.Variation.Hierarquia de datas.Trimestre\"},{\"queryRef\":\"Producao.Período.Variation.Hierarquia de datas.Mês\"},{\"queryRef\":\"Producao.Período.Variation.Hierarquia de datas.Dia\"}],\"Y\":[{\"queryRef\":\"Sum(Producao.Total Unidades Produzidas)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Producao\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"Período\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Ano\"},\"Name\":\"Producao.Período.Variation.Hierarquia de datas.Ano\",\"NativeReferenceName\":\"Período Ano\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"Período\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Trimestre\"},\"Name\":\"Producao.Período.Variation.Hierarquia de datas.Trimestre\",\"NativeReferenceName\":\"Período Trimestre\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"Período\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Mês\"},\"Name\":\"Producao.Período.Variation.Hierarquia de datas.Mês\",\"NativeReferenceName\":\"Período Mês\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"Período\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Dia\"},\"Name\":\"Producao.Período.Variation.Hierarquia de datas.Dia\",\"NativeReferenceName\":\"Período Dia\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Total Unidades Produzidas\"}},\"Function\":1},\"Name\":\"Sum(Producao.Total Unidades Produzidas)\",\"NativeReferenceName\":\"Média de Total Unidades Produzidas\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"anomalyDetection\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"displayName\":{\"expr\":{\"Literal\":{\"Value\":\"'Localizar anomalias 1'\"}}},\"transform\":{\"algorithm\":\"SampleAndDetectAnomaly\",\"parameters\":[{\"Literal\":{\"Value\":\"0.92D\"},\"Name\":\"Sensitivity\"},{\"Literal\":{\"Value\":\"3500L\"},\"Name\":\"SampleSizePerSeries\"}]},\"explainBy\":{\"exprs\":[],\"kind\":\"ExprList\"}},\"selector\":{\"metadata\":\"Sum(Producao.Total Unidades Produzidas)\",\"id\":\"1\"}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#252423'\"}}}}}},\"selector\":{\"metadata\":\"Sum(Producao.Total Unidades Produzidas)\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Detecção de Anomalias'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 353.97,
+          "width": 389.72,
+          "x": 875.98,
+          "y": 100.11,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"859c0f9e51185b62d3d0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":14.301675977653632,\"y\":100.11173184357543,\"z\":0,\"width\":184.13407821229052,\"height\":92.9608938547486,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Producao.Turno\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Producao\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Turno\"},\"Name\":\"Producao.Turno\",\"NativeReferenceName\":\"Turno\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 92.96,
+          "width": 184.13,
+          "x": 14.30,
+          "y": 100.11,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"ec3d02bbf1afe6c42ebc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":198.43575418994416,\"y\":96.53631284916202,\"z\":2000,\"width\":663.2402234636872,\"height\":352.1787709497207,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"areaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Producao.Período.Variation.Hierarquia de datas.Ano\",\"active\":true},{\"queryRef\":\"Producao.Período.Variation.Hierarquia de datas.Trimestre\",\"active\":true},{\"queryRef\":\"Producao.Período.Variation.Hierarquia de datas.Mês\",\"active\":true},{\"queryRef\":\"Producao.Período.Variation.Hierarquia de datas.Dia\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Producao.Total Unidades Produzidas)\"}],\"Series\":[{\"queryRef\":\"Producao.Range Idade Funcionários\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Producao\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"Período\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Ano\"},\"Name\":\"Producao.Período.Variation.Hierarquia de datas.Ano\",\"NativeReferenceName\":\"Período Ano\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"Período\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Trimestre\"},\"Name\":\"Producao.Período.Variation.Hierarquia de datas.Trimestre\",\"NativeReferenceName\":\"Período Trimestre\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"Período\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Mês\"},\"Name\":\"Producao.Período.Variation.Hierarquia de datas.Mês\",\"NativeReferenceName\":\"Período Mês\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"Período\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Dia\"},\"Name\":\"Producao.Período.Variation.Hierarquia de datas.Dia\",\"NativeReferenceName\":\"Período Dia\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Total Unidades Produzidas\"}},\"Function\":1},\"Name\":\"Sum(Producao.Total Unidades Produzidas)\",\"NativeReferenceName\":\"Média de Total Unidades Produzidas\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Range Idade Funcionários\"},\"Name\":\"Producao.Range Idade Funcionários\",\"NativeReferenceName\":\"Range Idade Funcionários\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"legend\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'RightCenter'\"}}},\"matchLineColor\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Média de Unidades Produzidas por Ano, Trimestre, Mês e Faixa Etária dos Funcionários'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 352.18,
+          "width": 663.24,
+          "x": 198.44,
+          "y": 96.54,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"ecfd5af0098767449a77\",\"layouts\":[{\"id\":0,\"position\":{\"x\":14.301675977653632,\"y\":205.58659217877096,\"z\":1000,\"width\":184.13407821229052,\"height\":248.49162011173186,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Producao.Range Idade Funcionários\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Producao\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Range Idade Funcionários\"},\"Name\":\"Producao.Range Idade Funcionários\",\"NativeReferenceName\":\"Range Idade Funcionários\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}],\"header\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Faixa Etária'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 248.49,
+          "width": 184.13,
+          "x": 14.30,
+          "y": 205.59,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"f65c3e66d335e03b8383\",\"layouts\":[{\"id\":0,\"position\":{\"x\":14.301675977653632,\"y\":461.22905027932967,\"z\":4000,\"width\":1251.396648044693,\"height\":239.55307262569835,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Producao.Período.Variation.Hierarquia de datas.Ano\",\"active\":true},{\"queryRef\":\"Producao.Período.Variation.Hierarquia de datas.Trimestre\"},{\"queryRef\":\"Producao.Período.Variation.Hierarquia de datas.Mês\"},{\"queryRef\":\"Producao.Período.Variation.Hierarquia de datas.Dia\"}],\"Y\":[{\"queryRef\":\"Sum(Producao.Total Unidades Produzidas)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Producao\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"Período\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Ano\"},\"Name\":\"Producao.Período.Variation.Hierarquia de datas.Ano\",\"NativeReferenceName\":\"Período Ano\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"Período\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Trimestre\"},\"Name\":\"Producao.Período.Variation.Hierarquia de datas.Trimestre\",\"NativeReferenceName\":\"Período Trimestre\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"Período\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Mês\"},\"Name\":\"Producao.Período.Variation.Hierarquia de datas.Mês\",\"NativeReferenceName\":\"Período Mês\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"Período\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Dia\"},\"Name\":\"Producao.Período.Variation.Hierarquia de datas.Dia\",\"NativeReferenceName\":\"Período Dia\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Total Unidades Produzidas\"}},\"Function\":1},\"Name\":\"Sum(Producao.Total Unidades Produzidas)\",\"NativeReferenceName\":\"Média de Total Unidades Produzidas\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"forecast\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"displayName\":{\"expr\":{\"Literal\":{\"Value\":\"'Previsão 1'\"}}},\"transform\":{\"algorithm\":\"Forecast\",\"parameters\":[{\"Literal\":{\"Value\":\"0D\"},\"Name\":\"Unit\"},{\"Literal\":{\"Value\":\"5D\"},\"Name\":\"ForecastLength\"},{\"Literal\":{\"Value\":\"0D\"},\"Name\":\"IgnoreLast\"},{\"Literal\":{\"Value\":\"0.8D\"},\"Name\":\"ConfidenceLevel\"}]},\"bandLineShow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"bandLinePattern\":{\"expr\":{\"Literal\":{\"Value\":\"'solid'\"}}},\"bandLineMatchColor\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"bandAreaShow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"matchSeriesInterpolation\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"metadata\":\"Sum(Producao.Total Unidades Produzidas)\",\"id\":\"1\"}}],\"lineStyles\":[{\"properties\":{\"showMarker\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#252423'\"}}}}}},\"selector\":{\"metadata\":\"Sum(Producao.Total Unidades Produzidas)\"}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Previsões de Unidades Produzidas com Horizonte de 5 anos'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 239.55,
+          "width": 1251.40,
+          "x": 14.30,
+          "y": 461.23,
+          "z": 4000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Series temporais",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "816b07fae1e2d3220ba4",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"9550d29b11403a939a0a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16.097560975609756,\"y\":64.39024390243902,\"z\":0,\"width\":1249.7560975609756,\"height\":630.7317073170732,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Avg(Producao.Total Unidades Produzidas)\"}],\"Category\":[{\"queryRef\":\"Producao.Período.Variation.Hierarquia de datas.Ano\",\"active\":true},{\"queryRef\":\"Producao.Período.Variation.Hierarquia de datas.Trimestre\"},{\"queryRef\":\"Producao.Período.Variation.Hierarquia de datas.Mês\"},{\"queryRef\":\"Producao.Período.Variation.Hierarquia de datas.Dia\"}],\"Series\":[{\"queryRef\":\"Producao.Range Idade Funcionários\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Producao\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Total Unidades Produzidas\"}},\"Function\":1},\"Name\":\"Avg(Producao.Total Unidades Produzidas)\",\"NativeReferenceName\":\"Média de Total Unidades Produzidas\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"Período\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Ano\"},\"Name\":\"Producao.Período.Variation.Hierarquia de datas.Ano\",\"NativeReferenceName\":\"Período Ano\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"Período\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Trimestre\"},\"Name\":\"Producao.Período.Variation.Hierarquia de datas.Trimestre\",\"NativeReferenceName\":\"Período Trimestre\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"Período\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Mês\"},\"Name\":\"Producao.Período.Variation.Hierarquia de datas.Mês\",\"NativeReferenceName\":\"Período Mês\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"Período\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Dia\"},\"Name\":\"Producao.Período.Variation.Hierarquia de datas.Dia\",\"NativeReferenceName\":\"Período Dia\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Range Idade Funcionários\"},\"Name\":\"Producao.Range Idade Funcionários\",\"NativeReferenceName\":\"Range Idade Funcionários\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"referenceLine\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"displayName\":{\"expr\":{\"Literal\":{\"Value\":\"'Linha média 1'\"}}},\"value\":{\"expr\":{\"Aggregation\":{\"Expression\":{\"SelectRef\":{\"ExpressionName\":\"Avg(Producao.Total Unidades Produzidas)\"}},\"Function\":1}}},\"dataLabelShow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":-0.25}}}}}},\"selector\":{\"metadata\":\"Avg(Producao.Total Unidades Produzidas)\",\"id\":\"1\"}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 630.73,
+          "width": 1249.76,
+          "x": 16.10,
+          "y": 64.39,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Anomalias em series temporais",
+      "displayOption": 2,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "8a479380a97dcd18b0bc",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"cd768f3a52c3bc81bfe4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.24390243902439,\"y\":0,\"z\":0,\"width\":1255.6097560975609,\"height\":699.5121951219512,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Producao.Período.Variation.Hierarquia de datas.Ano\",\"active\":true},{\"queryRef\":\"Producao.Período.Variation.Hierarquia de datas.Trimestre\"},{\"queryRef\":\"Producao.Período.Variation.Hierarquia de datas.Mês\"},{\"queryRef\":\"Producao.Período.Variation.Hierarquia de datas.Dia\"}],\"Y\":[{\"queryRef\":\"Sum(Producao.Total Unidades Produzidas)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Producao\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"Período\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Ano\"},\"Name\":\"Producao.Período.Variation.Hierarquia de datas.Ano\",\"NativeReferenceName\":\"Período Ano\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"Período\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Trimestre\"},\"Name\":\"Producao.Período.Variation.Hierarquia de datas.Trimestre\",\"NativeReferenceName\":\"Período Trimestre\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"Período\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Mês\"},\"Name\":\"Producao.Período.Variation.Hierarquia de datas.Mês\",\"NativeReferenceName\":\"Período Mês\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"Período\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Dia\"},\"Name\":\"Producao.Período.Variation.Hierarquia de datas.Dia\",\"NativeReferenceName\":\"Período Dia\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Total Unidades Produzidas\"}},\"Function\":1},\"Name\":\"Sum(Producao.Total Unidades Produzidas)\",\"NativeReferenceName\":\"Média de Total Unidades Produzidas\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"anomalyDetection\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"displayName\":{\"expr\":{\"Literal\":{\"Value\":\"'Localizar anomalias 1'\"}}},\"transform\":{\"algorithm\":\"SampleAndDetectAnomaly\",\"parameters\":[{\"Literal\":{\"Value\":\"0.92D\"},\"Name\":\"Sensitivity\"},{\"Literal\":{\"Value\":\"3500L\"},\"Name\":\"SampleSizePerSeries\"}]},\"explainBy\":{\"exprs\":[],\"kind\":\"ExprList\"}},\"selector\":{\"metadata\":\"Sum(Producao.Total Unidades Produzidas)\",\"id\":\"1\"}}]}}}",
+          "filters": "[]",
+          "height": 699.51,
+          "width": 1255.61,
+          "x": 10.24,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "previsões para series temporais",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "a0e303a650a84f53a1c3",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"46ff2a974939366ea89f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.24390243902439,\"y\":0,\"z\":0,\"width\":1255.6097560975609,\"height\":699.5121951219512,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Producao.Período.Variation.Hierarquia de datas.Ano\",\"active\":true},{\"queryRef\":\"Producao.Período.Variation.Hierarquia de datas.Trimestre\"},{\"queryRef\":\"Producao.Período.Variation.Hierarquia de datas.Mês\"},{\"queryRef\":\"Producao.Período.Variation.Hierarquia de datas.Dia\"}],\"Y\":[{\"queryRef\":\"Sum(Producao.Total Unidades Produzidas)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Producao\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"Período\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Ano\"},\"Name\":\"Producao.Período.Variation.Hierarquia de datas.Ano\",\"NativeReferenceName\":\"Período Ano\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"Período\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Trimestre\"},\"Name\":\"Producao.Período.Variation.Hierarquia de datas.Trimestre\",\"NativeReferenceName\":\"Período Trimestre\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"Período\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Mês\"},\"Name\":\"Producao.Período.Variation.Hierarquia de datas.Mês\",\"NativeReferenceName\":\"Período Mês\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"Período\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Dia\"},\"Name\":\"Producao.Período.Variation.Hierarquia de datas.Dia\",\"NativeReferenceName\":\"Período Dia\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Total Unidades Produzidas\"}},\"Function\":1},\"Name\":\"Sum(Producao.Total Unidades Produzidas)\",\"NativeReferenceName\":\"Média de Total Unidades Produzidas\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"forecast\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"displayName\":{\"expr\":{\"Literal\":{\"Value\":\"'Previsão 1'\"}}},\"transform\":{\"algorithm\":\"Forecast\",\"parameters\":[{\"Literal\":{\"Value\":\"0D\"},\"Name\":\"Unit\"},{\"Literal\":{\"Value\":\"5D\"},\"Name\":\"ForecastLength\"},{\"Literal\":{\"Value\":\"0D\"},\"Name\":\"IgnoreLast\"},{\"Literal\":{\"Value\":\"0.9D\"},\"Name\":\"ConfidenceLevel\"}]},\"bandLineShow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"bandLinePattern\":{\"expr\":{\"Literal\":{\"Value\":\"'solid'\"}}},\"bandLineMatchColor\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"bandAreaShow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}},\"selector\":{\"metadata\":\"Sum(Producao.Total Unidades Produzidas)\",\"id\":\"1\"}}]}}}",
+          "filters": "[]",
+          "height": 699.51,
+          "width": 1255.61,
+          "x": 10.24,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
