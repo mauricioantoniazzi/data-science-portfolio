@@ -1,2 +1,0 @@
-{"timestamp":"2026-02-24T18:36:15.475532Z","level":"error","event":"Server indicated the task shouldn't be running anymore. Terminating process","detail":{"detail":{"reason":"not_found","message":"Task Instance not found"}},"logger":"task"}
-{"timestamp":"2026-02-24T18:36:15.587335Z","level":"error","event":"Task killed!","logger":"task"}
