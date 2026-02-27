@@ -1,0 +1,4 @@
+{"timestamp":"2026-02-24T18:26:29.216415Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-24T18:26:29.247563Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/dag_ecommerce_olist.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-24T18:26:29.701610Z","level":"info","event":"--- Lendo dados da Gold: data/gold/fact_orders.parquet ---","logger":"task.stdout"}
+{"timestamp":"2026-02-24T18:26:36.605125Z","level":"critical","event":"Process terminated by signal. Likely out of memory error (OOM). For more information, see https://airflow.apache.org/docs/apache-airflow/stable/troubleshooting.html#process-terminated-by-signal.","signal":-9,"signal_name":"SIGKILL","logger":"task"}

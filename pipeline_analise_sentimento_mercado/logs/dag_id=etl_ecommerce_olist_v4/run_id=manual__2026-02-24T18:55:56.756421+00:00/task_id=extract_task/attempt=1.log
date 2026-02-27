@@ -1,0 +1,19 @@
+{"timestamp":"2026-02-24T18:56:25.972656Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-24T18:56:26.016834Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/dag_ecommerce_olist.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-24T18:56:26.570972Z","level":"warning","event":"The `airflow.decorators.dag` attribute is deprecated. Please use `'airflow.sdk.dag'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/dag_ecommerce_olist.py","lineno":5,"logger":"py.warnings"}
+{"timestamp":"2026-02-24T18:56:26.574146Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/dag_ecommerce_olist.py","lineno":5,"logger":"py.warnings"}
+{"timestamp":"2026-02-24T18:56:26.850325Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-24T18:56:26.850577Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-24T18:56:26.850721Z","level":"info","event":"Current task name:extract_task","logger":"task.stdout"}
+{"timestamp":"2026-02-24T18:56:26.850892Z","level":"info","event":"Dag name:etl_ecommerce_olist_v4","logger":"task.stdout"}
+{"timestamp":"2026-02-24T18:56:26.867347Z","level":"info","event":"--- Lendo arquivo: data/bronze/olist_orders_dataset.csv ---","logger":"task.stdout"}
+{"timestamp":"2026-02-24T18:56:29.274582Z","level":"info","event":"--- Salvando orders em Parquet ---","logger":"task.stdout"}
+{"timestamp":"2026-02-24T18:56:30.906620Z","level":"info","event":"--- Extração concluída com sucesso! ---","logger":"task.stdout"}
+{"timestamp":"2026-02-24T18:56:31.002493Z","level":"info","event":"--- Lendo arquivo: data/bronze/olist_order_items_dataset.csv ---","logger":"task.stdout"}
+{"timestamp":"2026-02-24T18:56:32.591398Z","level":"info","event":"--- Salvando order_item em Parquet ---","logger":"task.stdout"}
+{"timestamp":"2026-02-24T18:56:33.726578Z","level":"info","event":"--- Extração concluída com sucesso! ---","logger":"task.stdout"}
+{"timestamp":"2026-02-24T18:56:33.849924Z","level":"info","event":"Done. Returned value was: Extração concluída","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":230}
+{"timestamp":"2026-02-24T18:56:33.862415Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c9102-0e56-7aba-aa8f-890634d753f4'), task_id='extract_task', dag_id='etl_ecommerce_olist_v4', run_id='manual__2026-02-24T18:55:56.756421+00:00', try_number=1, dag_version_id=UUID('019c9101-7464-7762-99a1-dd96d43e45d1'), map_index=-1, hostname='710b9ac01f65', context_carrier={}, task=<Task(_PythonDecoratedOperator): extract_task>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=1, start_date=datetime.datetime(2026, 2, 24, 18, 56, 5, 146275, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1522}
+{"timestamp":"2026-02-24T18:56:34.920741Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-02-24T18:56:34.930945Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-02-24T18:56:34.932004Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): extract_task>","logger":"task.stdout"}
