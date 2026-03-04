@@ -1,0 +1,37 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+#Dados e Bancos
+data/bronze/
+data/silver/
+data/gold/
+
+#Ambiente Virtual e Gerenciadores
+.venv/
+.pytest_cache/
+
+#Arquivos do dbt
+dbt_project/target/
+dbt_project/dbt_packages/
+dbt_project/logs/
+
+# Virtual environments
+.venv
+venv/
+env/
+ENV/
+
+# Environment variables e credenciais
+.env
+.env.local
+.env.*.local
+config/.env
+config/*.env
+*.key
+*.pem
+credentials.json

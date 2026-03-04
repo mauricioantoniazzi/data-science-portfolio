@@ -1,0 +1,11 @@
+ecommerce_analytics:
+  outputs:
+    dev:
+      type: duckdb
+      path: '../data/gold/ecommerce_gold.duckdb' # Onde o DuckDB salvará o banco local
+      extensions:
+        - delta   # Fundamental para ler o formato que o Spark gerou
+        - httpfs  # Necessário para a extensão delta funcionar
+      settings:
+        s3_region: us-east-1 # Valor padrão exigido pela extensão
+  target: dev
