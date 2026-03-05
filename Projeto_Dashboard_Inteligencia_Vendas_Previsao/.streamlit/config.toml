@@ -1,0 +1,16 @@
+[theme]
+
+# Cor de fundo do aplicativo
+backgroundColor = "#1E2A3A"
+
+# Cor de fundo dos widgets, sidebars e containers
+secondaryBackgroundColor = "#304050"
+
+# Cor do texto
+textColor = "#FFFFFF"
+
+# Cor primária de destaque (para botões, sliders, etc.)
+primaryColor = "#0080FF"
+
+# Cor dos links e elementos de destaque
+# font = "sans serif"
