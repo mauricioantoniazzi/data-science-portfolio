@@ -1,0 +1,418 @@
+[0m09:50:55.693872 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017757294AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177585D39D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177585D3ED0>]}
+
+
+============================== 09:50:55.862208 | 08934aa8-1d62-4547-bc37-6a4b1ddc4633 ==============================
+[0m09:50:55.862208 [info ] [MainThread]: Running with dbt=1.11.7
+[0m09:50:55.869451 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\mdant\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt init transformacao', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m09:50:55.959394 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\mdant\.dbt
+[0m09:50:55.963749 [debug] [MainThread]: Starter project path: C:\Users\mdant\Documents\data-science-portfolio\Projeto_Dashboard_Inteligencia_Vendas_Previsao\venv\Lib\site-packages\dbt\include\starter_project
+[0m09:50:56.031641 [info ] [MainThread]: 
+Your new dbt project "transformacao" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m09:50:56.033476 [info ] [MainThread]: Setting up your profile.
+[0m09:50:56.036413 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No adapters available. Learn how to install an adapter by going to https://docs.getdbt.com/docs/connect-adapters#install-using-the-cli
+[0m09:50:56.040481 [debug] [MainThread]: Command `dbt init` failed at 09:50:56.040094 after 0.87 seconds
+[0m09:50:56.042258 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017759688180>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001775964DC70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001775843BBD0>]}
+[0m09:50:56.043525 [debug] [MainThread]: Flushing usage events
+[0m09:50:58.109959 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:21:19.679146 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CD1F25C6E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CD1F9F4A50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CD201BBED0>]}
+
+
+============================== 10:21:19.700906 | 35ff7355-76df-48a9-badb-8f8cb0d3a58d ==============================
+[0m10:21:19.700906 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:21:19.702489 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\mdant\\.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m10:21:19.759633 [info ] [MainThread]: dbt version: 1.11.7
+[0m10:21:19.760650 [info ] [MainThread]: python version: 3.13.7
+[0m10:21:19.761527 [info ] [MainThread]: python path: C:\Users\mdant\Documents\data-science-portfolio\Projeto_Dashboard_Inteligencia_Vendas_Previsao\venv\Scripts\python.exe
+[0m10:21:19.762386 [info ] [MainThread]: os info: Windows-11-10.0.26220-SP0
+[0m10:21:19.770387 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.sqlserver'
+[0m10:21:19.772402 [info ] [MainThread]: Using profiles dir at C:\Users\mdant\.dbt
+[0m10:21:19.773785 [info ] [MainThread]: Using profiles.yml file at C:\Users\mdant\.dbt\profiles.yml
+[0m10:21:19.774792 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\mdant\Documents\data-science-portfolio\Projeto_Dashboard_Inteligencia_Vendas_Previsao\dbt_project.yml
+[0m10:21:19.776083 [info ] [MainThread]: Configuration:
+[0m10:21:19.776967 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m10:21:19.777854 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m10:21:19.779325 [info ] [MainThread]: Required dependencies:
+[0m10:21:19.780547 [debug] [MainThread]: Executing "git --help"
+[0m10:21:19.828044 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m10:21:19.828882 [debug] [MainThread]: STDERR: "b''"
+[0m10:21:19.829689 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m10:21:19.830697 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m10:21:19.831745 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m10:21:19.832633 [info ] [MainThread]: Could not load dbt_project.yml
+Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "transformacao", target "dev" invalid: Runtime Error
+    Could not find adapter type sqlserver!
+
+
+[0m10:21:19.833616 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\mdant\Documents\data-science-portfolio\Projeto_Dashboard_Inteligencia_Vendas_Previsao\dbt_project.yml> not found
+
+[0m10:21:19.835133 [debug] [MainThread]: Command `python -m dbt.cli.main debug` failed at 10:21:19.834923 after 0.48 seconds
+[0m10:21:19.835755 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CD212B4B00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CD212697F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CD21246250>]}
+[0m10:21:19.836333 [debug] [MainThread]: Flushing usage events
+[0m10:21:21.418664 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:31:20.097449 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC20D8B2C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC2064B9B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC203B0AA0>]}
+
+
+============================== 10:31:20.133914 | 273721ce-db4a-4251-a628-50c95c166369 ==============================
+[0m10:31:20.133914 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:31:20.136928 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\mdant\\.dbt', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m10:31:20.202990 [info ] [MainThread]: dbt version: 1.11.7
+[0m10:31:20.203942 [info ] [MainThread]: python version: 3.12.9
+[0m10:31:20.204944 [info ] [MainThread]: python path: C:\Users\mdant\Documents\data-science-portfolio\Projeto_Dashboard_Inteligencia_Vendas_Previsao\venv\Scripts\python.exe
+[0m10:31:20.205947 [info ] [MainThread]: os info: Windows-11-10.0.26220-SP0
+[0m10:31:24.270354 [info ] [MainThread]: Using profiles dir at C:\Users\mdant\.dbt
+[0m10:31:24.271354 [info ] [MainThread]: Using profiles.yml file at C:\Users\mdant\.dbt\profiles.yml
+[0m10:31:24.272354 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\mdant\Documents\data-science-portfolio\Projeto_Dashboard_Inteligencia_Vendas_Previsao\dbt_project.yml
+[0m10:31:24.273355 [info ] [MainThread]: adapter type: sqlserver
+[0m10:31:24.275357 [info ] [MainThread]: adapter version: 1.9.0
+[0m10:31:24.276354 [info ] [MainThread]: Configuration:
+[0m10:31:24.278352 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m10:31:24.279353 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m10:31:24.280353 [info ] [MainThread]: Required dependencies:
+[0m10:31:24.282357 [debug] [MainThread]: Executing "git --help"
+[0m10:31:24.336664 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m10:31:24.337661 [debug] [MainThread]: STDERR: "b''"
+[0m10:31:24.338674 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m10:31:24.340671 [info ] [MainThread]: Connection:
+[0m10:31:24.341662 [info ] [MainThread]:   server: Antoniazzi
+[0m10:31:24.342667 [info ] [MainThread]:   database: VendasMD
+[0m10:31:24.343665 [info ] [MainThread]:   schema: dbo
+[0m10:31:24.344663 [info ] [MainThread]:   UID: None
+[0m10:31:24.346664 [info ] [MainThread]:   client_id: None
+[0m10:31:24.347669 [info ] [MainThread]:   authentication: sql
+[0m10:31:24.349678 [info ] [MainThread]:   encrypt: True
+[0m10:31:24.351687 [info ] [MainThread]:   trust_cert: False
+[0m10:31:24.353685 [info ] [MainThread]:   retries: 3
+[0m10:31:24.354679 [info ] [MainThread]:   login_timeout: 0
+[0m10:31:24.356679 [info ] [MainThread]:   query_timeout: 0
+[0m10:31:24.357681 [info ] [MainThread]:   trace_flag: False
+[0m10:31:24.358681 [info ] [MainThread]:   port: 1433
+[0m10:31:24.361682 [info ] [MainThread]: Registered adapter: sqlserver=1.9.0
+[0m10:31:25.070795 [debug] [MainThread]: Acquiring new sqlserver connection 'debug'
+[0m10:31:25.071792 [debug] [MainThread]: Using sqlserver connection "debug"
+[0m10:31:25.073791 [debug] [MainThread]: On debug: select 1 as id
+[0m10:31:25.074789 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:31:25.076791 [debug] [MainThread]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=Antoniazzi;Database=VendasMD;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=No;APP=dbt-sqlserver/1.9.3;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m10:31:25.386997 [debug] [MainThread]: fabric adapter: Got a retryable error when attempting to open a sqlserver connection.
+3 attempts remaining. Retrying in 1 seconds.
+Error:
+('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Provedor SSL: A cadeia de certificação foi emitida por uma autoridade que não é de confiança.\r\n (-2146893019) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]O cliente não pôde estabelecer a conexão (-2146893019); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Atributo de cadeia de conexão inválido (0)')
+[0m10:31:26.388559 [debug] [MainThread]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=Antoniazzi;Database=VendasMD;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=No;APP=dbt-sqlserver/1.9.3;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m10:31:26.426979 [debug] [MainThread]: fabric adapter: Got a retryable error when attempting to open a sqlserver connection.
+2 attempts remaining. Retrying in 1 seconds.
+Error:
+('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Provedor SSL: A cadeia de certificação foi emitida por uma autoridade que não é de confiança.\r\n (-2146893019) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]O cliente não pôde estabelecer a conexão (-2146893019); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Atributo de cadeia de conexão inválido (0)')
+[0m10:31:27.430016 [debug] [MainThread]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=Antoniazzi;Database=VendasMD;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=No;APP=dbt-sqlserver/1.9.3;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m10:31:27.442156 [debug] [MainThread]: fabric adapter: Got a retryable error when attempting to open a sqlserver connection.
+1 attempts remaining. Retrying in 1 seconds.
+Error:
+('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Provedor SSL: A cadeia de certificação foi emitida por uma autoridade que não é de confiança.\r\n (-2146893019) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]O cliente não pôde estabelecer a conexão (-2146893019); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Atributo de cadeia de conexão inválido (0)')
+[0m10:31:28.443488 [debug] [MainThread]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=Antoniazzi;Database=VendasMD;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=No;APP=dbt-sqlserver/1.9.3;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m10:31:28.453764 [debug] [MainThread]: fabric adapter: Error running SQL: select 1 as id
+[0m10:31:28.454768 [debug] [MainThread]: fabric adapter: Rolling back transaction.
+[0m10:31:28.455768 [debug] [MainThread]: On debug: No close available on handle
+[0m10:31:28.455768 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m10:31:28.456760 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m10:31:28.458761 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\mdant\Documents\data-science-portfolio\Projeto_Dashboard_Inteligencia_Vendas_Previsao\dbt_project.yml> not found
+
+[0m10:31:28.459762 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Provedor SSL: A cadeia de certificação foi emitida por uma autoridade que não é de confiança.\r\n (-2146893019) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]O cliente não pôde estabelecer a conexão (-2146893019); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Atributo de cadeia de conexão inválido (0)')
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m10:31:28.462761 [debug] [MainThread]: Command `python -m dbt.cli.main debug` failed at 10:31:28.462761 after 8.60 seconds
+[0m10:31:28.463757 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m10:31:28.464759 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC20E28D40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC206AE060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC22686D80>]}
+[0m10:31:28.464759 [debug] [MainThread]: Flushing usage events
+[0m10:31:30.068452 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:34:02.905961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B4609E58E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B4609E5010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B4609E5BE0>]}
+
+
+============================== 10:34:02.915596 | 05656a6e-bb69-433c-b8b1-33ad5174e3fa ==============================
+[0m10:34:02.915596 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:34:02.916603 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\mdant\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m10:34:02.961153 [info ] [MainThread]: dbt version: 1.11.7
+[0m10:34:02.963146 [info ] [MainThread]: python version: 3.12.9
+[0m10:34:02.964152 [info ] [MainThread]: python path: C:\Users\mdant\Documents\data-science-portfolio\Projeto_Dashboard_Inteligencia_Vendas_Previsao\venv\Scripts\python.exe
+[0m10:34:02.965151 [info ] [MainThread]: os info: Windows-11-10.0.26220-SP0
+[0m10:34:03.463042 [info ] [MainThread]: Using profiles dir at C:\Users\mdant\.dbt
+[0m10:34:03.465020 [info ] [MainThread]: Using profiles.yml file at C:\Users\mdant\.dbt\profiles.yml
+[0m10:34:03.466002 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\mdant\Documents\data-science-portfolio\Projeto_Dashboard_Inteligencia_Vendas_Previsao\dbt_project.yml
+[0m10:34:03.467001 [info ] [MainThread]: adapter type: sqlserver
+[0m10:34:03.468000 [info ] [MainThread]: adapter version: 1.9.0
+[0m10:34:03.469001 [info ] [MainThread]: Configuration:
+[0m10:34:03.470004 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m10:34:03.471000 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m10:34:03.473001 [info ] [MainThread]: Required dependencies:
+[0m10:34:03.475005 [debug] [MainThread]: Executing "git --help"
+[0m10:34:03.601220 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m10:34:03.602221 [debug] [MainThread]: STDERR: "b''"
+[0m10:34:03.603265 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m10:34:03.604779 [info ] [MainThread]: Connection:
+[0m10:34:03.605811 [info ] [MainThread]:   server: Antoniazzi
+[0m10:34:03.606629 [info ] [MainThread]:   database: VendasMD
+[0m10:34:03.607728 [info ] [MainThread]:   schema: dbo
+[0m10:34:03.608716 [info ] [MainThread]:   UID: None
+[0m10:34:03.609736 [info ] [MainThread]:   client_id: None
+[0m10:34:03.610734 [info ] [MainThread]:   authentication: sql
+[0m10:34:03.612727 [info ] [MainThread]:   encrypt: True
+[0m10:34:03.613745 [info ] [MainThread]:   trust_cert: False
+[0m10:34:03.614741 [info ] [MainThread]:   retries: 3
+[0m10:34:03.615728 [info ] [MainThread]:   login_timeout: 0
+[0m10:34:03.616733 [info ] [MainThread]:   query_timeout: 0
+[0m10:34:03.618728 [info ] [MainThread]:   trace_flag: False
+[0m10:34:03.619738 [info ] [MainThread]:   port: 1433
+[0m10:34:03.624726 [info ] [MainThread]: Registered adapter: sqlserver=1.9.0
+[0m10:34:04.125182 [debug] [MainThread]: Acquiring new sqlserver connection 'debug'
+[0m10:34:04.125182 [debug] [MainThread]: Using sqlserver connection "debug"
+[0m10:34:04.126181 [debug] [MainThread]: On debug: select 1 as id
+[0m10:34:04.127182 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:34:04.127182 [debug] [MainThread]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=Antoniazzi;Database=VendasMD;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=No;APP=dbt-sqlserver/1.9.3;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m10:34:04.319957 [debug] [MainThread]: fabric adapter: Got a retryable error when attempting to open a sqlserver connection.
+3 attempts remaining. Retrying in 1 seconds.
+Error:
+('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Provedor SSL: A cadeia de certificação foi emitida por uma autoridade que não é de confiança.\r\n (-2146893019) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]O cliente não pôde estabelecer a conexão (-2146893019); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Atributo de cadeia de conexão inválido (0)')
+[0m10:34:05.321150 [debug] [MainThread]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=Antoniazzi;Database=VendasMD;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=No;APP=dbt-sqlserver/1.9.3;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m10:34:05.450267 [debug] [MainThread]: fabric adapter: Got a retryable error when attempting to open a sqlserver connection.
+2 attempts remaining. Retrying in 1 seconds.
+Error:
+('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Provedor SSL: A cadeia de certificação foi emitida por uma autoridade que não é de confiança.\r\n (-2146893019) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]O cliente não pôde estabelecer a conexão (-2146893019); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Atributo de cadeia de conexão inválido (0)')
+[0m10:34:06.452285 [debug] [MainThread]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=Antoniazzi;Database=VendasMD;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=No;APP=dbt-sqlserver/1.9.3;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m10:34:06.461826 [debug] [MainThread]: fabric adapter: Got a retryable error when attempting to open a sqlserver connection.
+1 attempts remaining. Retrying in 1 seconds.
+Error:
+('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Provedor SSL: A cadeia de certificação foi emitida por uma autoridade que não é de confiança.\r\n (-2146893019) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]O cliente não pôde estabelecer a conexão (-2146893019); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Atributo de cadeia de conexão inválido (0)')
+[0m10:34:07.463952 [debug] [MainThread]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=Antoniazzi;Database=VendasMD;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=No;APP=dbt-sqlserver/1.9.3;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m10:34:07.489207 [debug] [MainThread]: fabric adapter: Error running SQL: select 1 as id
+[0m10:34:07.490208 [debug] [MainThread]: fabric adapter: Rolling back transaction.
+[0m10:34:07.491205 [debug] [MainThread]: On debug: No close available on handle
+[0m10:34:07.492205 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m10:34:07.494214 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m10:34:07.495153 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\mdant\Documents\data-science-portfolio\Projeto_Dashboard_Inteligencia_Vendas_Previsao\dbt_project.yml> not found
+
+[0m10:34:07.497165 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Provedor SSL: A cadeia de certificação foi emitida por uma autoridade que não é de confiança.\r\n (-2146893019) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]O cliente não pôde estabelecer a conexão (-2146893019); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Atributo de cadeia de conexão inválido (0)')
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m10:34:07.500168 [debug] [MainThread]: Command `python -m dbt.cli.main debug` failed at 10:34:07.500168 after 4.81 seconds
+[0m10:34:07.501171 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m10:34:07.503172 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B45D3A16A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B4627571A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B462A81F40>]}
+[0m10:34:07.504168 [debug] [MainThread]: Flushing usage events
+[0m10:34:08.973835 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:36:54.233700 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B7189B0DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B71BAFF830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B71B4E0BF0>]}
+
+
+============================== 10:36:54.242698 | bc44f8dc-4cc9-434b-baa2-41122572ed11 ==============================
+[0m10:36:54.242698 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:36:54.243705 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\mdant\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m10:36:54.281704 [info ] [MainThread]: dbt version: 1.11.7
+[0m10:36:54.282709 [info ] [MainThread]: python version: 3.12.9
+[0m10:36:54.283707 [info ] [MainThread]: python path: C:\Users\mdant\Documents\data-science-portfolio\Projeto_Dashboard_Inteligencia_Vendas_Previsao\venv\Scripts\python.exe
+[0m10:36:54.283707 [info ] [MainThread]: os info: Windows-11-10.0.26220-SP0
+[0m10:36:54.792982 [info ] [MainThread]: Using profiles dir at C:\Users\mdant\.dbt
+[0m10:36:54.794990 [info ] [MainThread]: Using profiles.yml file at C:\Users\mdant\.dbt\profiles.yml
+[0m10:36:54.795995 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\mdant\Documents\data-science-portfolio\Projeto_Dashboard_Inteligencia_Vendas_Previsao\dbt_project.yml
+[0m10:36:54.796984 [info ] [MainThread]: adapter type: sqlserver
+[0m10:36:54.797982 [info ] [MainThread]: adapter version: 1.9.0
+[0m10:36:54.799990 [info ] [MainThread]: Configuration:
+[0m10:36:54.801987 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m10:36:54.803989 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m10:36:54.805989 [info ] [MainThread]: Required dependencies:
+[0m10:36:54.806999 [debug] [MainThread]: Executing "git --help"
+[0m10:36:54.862985 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m10:36:54.865991 [debug] [MainThread]: STDERR: "b''"
+[0m10:36:54.867982 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m10:36:54.868993 [info ] [MainThread]: Connection:
+[0m10:36:54.871013 [info ] [MainThread]:   server: Antoniazzi
+[0m10:36:54.872000 [info ] [MainThread]:   database: VendasMD
+[0m10:36:54.874000 [info ] [MainThread]:   schema: dbo
+[0m10:36:54.875000 [info ] [MainThread]:   UID: None
+[0m10:36:54.876998 [info ] [MainThread]:   client_id: None
+[0m10:36:54.878001 [info ] [MainThread]:   authentication: sql
+[0m10:36:54.879999 [info ] [MainThread]:   encrypt: True
+[0m10:36:54.881998 [info ] [MainThread]:   trust_cert: False
+[0m10:36:54.883003 [info ] [MainThread]:   retries: 3
+[0m10:36:54.883998 [info ] [MainThread]:   login_timeout: 0
+[0m10:36:54.885514 [info ] [MainThread]:   query_timeout: 0
+[0m10:36:54.887526 [info ] [MainThread]:   trace_flag: False
+[0m10:36:54.888528 [info ] [MainThread]:   port: 1433
+[0m10:36:54.890527 [info ] [MainThread]: Registered adapter: sqlserver=1.9.0
+[0m10:36:55.444525 [debug] [MainThread]: Acquiring new sqlserver connection 'debug'
+[0m10:36:55.453563 [debug] [MainThread]: Using sqlserver connection "debug"
+[0m10:36:55.455827 [debug] [MainThread]: On debug: select 1 as id
+[0m10:36:55.456846 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:36:55.458832 [debug] [MainThread]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=Antoniazzi;Database=VendasMD;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=No;APP=dbt-sqlserver/1.9.3;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m10:36:55.510624 [debug] [MainThread]: fabric adapter: Got a retryable error when attempting to open a sqlserver connection.
+3 attempts remaining. Retrying in 1 seconds.
+Error:
+('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Provedor SSL: A cadeia de certificação foi emitida por uma autoridade que não é de confiança.\r\n (-2146893019) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]O cliente não pôde estabelecer a conexão (-2146893019); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Atributo de cadeia de conexão inválido (0)')
+[0m10:36:56.513111 [debug] [MainThread]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=Antoniazzi;Database=VendasMD;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=No;APP=dbt-sqlserver/1.9.3;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m10:36:56.526121 [debug] [MainThread]: fabric adapter: Got a retryable error when attempting to open a sqlserver connection.
+2 attempts remaining. Retrying in 1 seconds.
+Error:
+('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Provedor SSL: A cadeia de certificação foi emitida por uma autoridade que não é de confiança.\r\n (-2146893019) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]O cliente não pôde estabelecer a conexão (-2146893019); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Atributo de cadeia de conexão inválido (0)')
+[0m10:36:57.527188 [debug] [MainThread]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=Antoniazzi;Database=VendasMD;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=No;APP=dbt-sqlserver/1.9.3;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m10:36:57.558272 [debug] [MainThread]: fabric adapter: Got a retryable error when attempting to open a sqlserver connection.
+1 attempts remaining. Retrying in 1 seconds.
+Error:
+('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Provedor SSL: A cadeia de certificação foi emitida por uma autoridade que não é de confiança.\r\n (-2146893019) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]O cliente não pôde estabelecer a conexão (-2146893019); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Atributo de cadeia de conexão inválido (0)')
+[0m10:36:58.560806 [debug] [MainThread]: fabric adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=Antoniazzi;Database=VendasMD;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=No;APP=dbt-sqlserver/1.9.3;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m10:36:58.578832 [debug] [MainThread]: fabric adapter: Error running SQL: select 1 as id
+[0m10:36:58.579822 [debug] [MainThread]: fabric adapter: Rolling back transaction.
+[0m10:36:58.580822 [debug] [MainThread]: On debug: No close available on handle
+[0m10:36:58.582825 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m10:36:58.584820 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m10:36:58.586820 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\mdant\Documents\data-science-portfolio\Projeto_Dashboard_Inteligencia_Vendas_Previsao\dbt_project.yml> not found
+
+[0m10:36:58.587822 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Provedor SSL: A cadeia de certificação foi emitida por uma autoridade que não é de confiança.\r\n (-2146893019) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]O cliente não pôde estabelecer a conexão (-2146893019); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Atributo de cadeia de conexão inválido (0)')
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m10:36:58.591825 [debug] [MainThread]: Command `python -m dbt.cli.main debug` failed at 10:36:58.591825 after 4.61 seconds
+[0m10:36:58.592828 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m10:36:58.594831 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B71BBE3D70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B71D2E76B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B71CFB8D70>]}
+[0m10:36:58.595826 [debug] [MainThread]: Flushing usage events
+[0m10:36:59.938199 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:37:35.107527 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B24BC84FB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B24E8626F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B24E3433E0>]}
+
+
+============================== 10:37:35.117568 | 2d43c557-15a9-4b31-a71f-71dfed0ee066 ==============================
+[0m10:37:35.117568 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:37:35.119528 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\mdant\\.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m10:37:35.164624 [info ] [MainThread]: dbt version: 1.11.7
+[0m10:37:35.165626 [info ] [MainThread]: python version: 3.12.9
+[0m10:37:35.166617 [info ] [MainThread]: python path: C:\Users\mdant\Documents\data-science-portfolio\Projeto_Dashboard_Inteligencia_Vendas_Previsao\venv\Scripts\python.exe
+[0m10:37:35.168615 [info ] [MainThread]: os info: Windows-11-10.0.26220-SP0
+[0m10:37:35.660944 [info ] [MainThread]: Using profiles dir at C:\Users\mdant\.dbt
+[0m10:37:35.661945 [info ] [MainThread]: Using profiles.yml file at C:\Users\mdant\.dbt\profiles.yml
+[0m10:37:35.662960 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\mdant\Documents\data-science-portfolio\Projeto_Dashboard_Inteligencia_Vendas_Previsao\dbt_project.yml
+[0m10:37:35.663938 [info ] [MainThread]: adapter type: sqlserver
+[0m10:37:35.664947 [info ] [MainThread]: adapter version: 1.9.0
+[0m10:37:35.665948 [info ] [MainThread]: Configuration:
+[0m10:37:35.666949 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m10:37:35.667949 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m10:37:35.669940 [info ] [MainThread]: Required dependencies:
+[0m10:37:35.670941 [debug] [MainThread]: Executing "git --help"
+[0m10:37:35.709936 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m10:37:35.710947 [debug] [MainThread]: STDERR: "b''"
+[0m10:37:35.711940 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m10:37:35.713940 [info ] [MainThread]: Connection:
+[0m10:37:35.715016 [info ] [MainThread]:   server: Antoniazzi
+[0m10:37:35.715948 [info ] [MainThread]:   database: VendasMD
+[0m10:37:35.716941 [info ] [MainThread]:   schema: dbo
+[0m10:37:35.718945 [info ] [MainThread]:   UID: None
+[0m10:37:35.720943 [info ] [MainThread]:   client_id: None
+[0m10:37:35.721939 [info ] [MainThread]:   authentication: sql
+[0m10:37:35.723942 [info ] [MainThread]:   encrypt: True
+[0m10:37:35.724950 [info ] [MainThread]:   trust_cert: False
+[0m10:37:35.725985 [info ] [MainThread]:   retries: 3
+[0m10:37:35.726947 [info ] [MainThread]:   login_timeout: 0
+[0m10:37:35.728237 [info ] [MainThread]:   query_timeout: 0
+[0m10:37:35.729256 [info ] [MainThread]:   trace_flag: False
+[0m10:37:35.730380 [info ] [MainThread]:   port: 1433
+[0m10:37:35.731391 [info ] [MainThread]: Registered adapter: sqlserver=1.9.0
+[0m10:37:36.221809 [debug] [MainThread]: Acquiring new sqlserver connection 'debug'
+[0m10:37:36.221809 [debug] [MainThread]: Using sqlserver connection "debug"
+[0m10:37:36.222812 [debug] [MainThread]: On debug: select 1 as id
+[0m10:37:36.222812 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:37:36.223813 [debug] [MainThread]: fabric adapter: Using connection string: DRIVER={SQL Server};SERVER=Antoniazzi;Database=VendasMD;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=No;APP=dbt-sqlserver/1.9.3;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m10:37:52.508997 [debug] [MainThread]: fabric adapter: Got a retryable error when attempting to open a sqlserver connection.
+3 attempts remaining. Retrying in 1 seconds.
+Error:
+('08001', '[08001] [Microsoft][ODBC SQL Server Driver][Shared Memory]Erro de segurança SSL (18) (SQLDriverConnect); [08001] [Microsoft][ODBC SQL Server Driver][Shared Memory]ConnectionOpen (SECDoClientHandshake()). (271); [08001] [Microsoft][ODBC SQL Server Driver]Atributo de cadeia de conexão inválido (0)')
+[0m10:37:53.510127 [debug] [MainThread]: fabric adapter: Using connection string: DRIVER={SQL Server};SERVER=Antoniazzi;Database=VendasMD;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=No;APP=dbt-sqlserver/1.9.3;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m10:38:09.461301 [debug] [MainThread]: fabric adapter: Got a retryable error when attempting to open a sqlserver connection.
+2 attempts remaining. Retrying in 1 seconds.
+Error:
+('08001', '[08001] [Microsoft][ODBC SQL Server Driver][Shared Memory]Erro de segurança SSL (18) (SQLDriverConnect); [08001] [Microsoft][ODBC SQL Server Driver][Shared Memory]ConnectionOpen (SECDoClientHandshake()). (271); [08001] [Microsoft][ODBC SQL Server Driver]Atributo de cadeia de conexão inválido (0)')
+[0m10:38:10.464614 [debug] [MainThread]: fabric adapter: Using connection string: DRIVER={SQL Server};SERVER=Antoniazzi;Database=VendasMD;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=No;APP=dbt-sqlserver/1.9.3;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m10:38:26.435166 [debug] [MainThread]: fabric adapter: Got a retryable error when attempting to open a sqlserver connection.
+1 attempts remaining. Retrying in 1 seconds.
+Error:
+('08001', '[08001] [Microsoft][ODBC SQL Server Driver][Shared Memory]Erro de segurança SSL (18) (SQLDriverConnect); [08001] [Microsoft][ODBC SQL Server Driver][Shared Memory]ConnectionOpen (SECDoClientHandshake()). (271); [08001] [Microsoft][ODBC SQL Server Driver]Atributo de cadeia de conexão inválido (0)')
+[0m10:38:27.437143 [debug] [MainThread]: fabric adapter: Using connection string: DRIVER={SQL Server};SERVER=Antoniazzi;Database=VendasMD;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=No;APP=dbt-sqlserver/1.9.3;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m10:38:43.440325 [debug] [MainThread]: fabric adapter: Error running SQL: select 1 as id
+[0m10:38:43.440325 [debug] [MainThread]: fabric adapter: Rolling back transaction.
+[0m10:38:43.440325 [debug] [MainThread]: On debug: No close available on handle
+[0m10:38:43.440325 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m10:38:43.440325 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m10:38:43.440325 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\mdant\Documents\data-science-portfolio\Projeto_Dashboard_Inteligencia_Vendas_Previsao\dbt_project.yml> not found
+
+[0m10:38:43.440325 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  ('08001', '[08001] [Microsoft][ODBC SQL Server Driver][Shared Memory]Erro de segurança SSL (18) (SQLDriverConnect); [08001] [Microsoft][ODBC SQL Server Driver][Shared Memory]ConnectionOpen (SECDoClientHandshake()). (271); [08001] [Microsoft][ODBC SQL Server Driver]Atributo de cadeia de conexão inválido (0)')
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m10:38:43.440325 [debug] [MainThread]: Command `python -m dbt.cli.main debug` failed at 10:38:43.440325 after 68.57 seconds
+[0m10:38:43.440325 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m10:38:43.456170 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B24BC84FB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B250664530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B250971C40>]}
+[0m10:38:43.456170 [debug] [MainThread]: Flushing usage events
+[0m10:38:44.924921 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:43:57.276379 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D53664E30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D535E1EB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D50051490>]}
+
+
+============================== 10:43:57.293238 | 308e8213-6bd7-4d6c-8763-0c72e33ce2ee ==============================
+[0m10:43:57.293238 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:43:57.294235 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\mdant\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m10:43:57.295236 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\mdant\Documents\data-science-portfolio\Projeto_Dashboard_Inteligencia_Vendas_Previsao\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m10:43:57.297238 [debug] [MainThread]: Command `python -m dbt.cli.main run` failed at 10:43:57.296228 after 0.31 seconds
+[0m10:43:57.297238 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D54D8A270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D53C0DE80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D530251C0>]}
+[0m10:43:57.298233 [debug] [MainThread]: Flushing usage events
+[0m10:43:58.865463 [debug] [MainThread]: An error was encountered while trying to flush usage events

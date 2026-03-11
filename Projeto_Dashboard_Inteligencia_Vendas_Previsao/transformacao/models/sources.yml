@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: sql_server_vendas
+    database: VendasMD
+    schema: dbo
+    tables:
+      - name: Venda
+      - name: Produto
+      - name: Categoria
+      - name: Subcategoria
+      - name: Cliente
+      - name: Cidade
+      - name: Canal
+      - name: Marca

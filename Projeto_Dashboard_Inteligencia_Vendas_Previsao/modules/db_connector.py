@@ -41,37 +41,7 @@ def load_data():
 
     # Consulta SQL que faz o JOIN de todas as tabelas necessárias
     # Adaptar esta consulta conforme a necessidade exata de colunas
-    query = """
-    SELECT
-        V.ID_Pedido,
-        V.Data_Venda,
-        V.Data_Entrega,
-        V.Qtde,
-        V.Valor_Total,
-        P.Descricao_Produto,
-        P.Custo,
-        P.Preco_Unitario,
-        P.Tributos,
-        M.Marca,
-        C.Categoria,
-        SC.Subcategoria,
-        CL.Nome AS Nome_Cliente,
-        CL.Genero,
-        CD.Cidade,
-        CD.UF,
-        CA.Descricao_Canal
-    FROM 
-        Venda V
-    JOIN Produto P ON V.ID_Produto = P.ID_Produto
-    JOIN Marca M ON P.ID_Marca = M.ID_Marca
-    JOIN Subcategoria SC ON P.ID_Subcategoria = SC.ID_Subcategoria
-    JOIN Categoria C ON SC.ID_Categoria = C.ID_Categoria
-    JOIN Cliente CL ON V.ID_Cliente = CL.ID_Cliente
-    JOIN Cidade CD ON CL.ID_Cidade = CD.ID_Cidade
-    JOIN Canal CA ON V.ID_Canal = CA.ID_Canal
-    ORDER BY 
-        V.Data_Venda;
-    """
+    query = "SELECT * FROM dbo.fct_vendas_indicadores ORDER BY Data_Venda"
     try:
         df = pd.read_sql(query, conn)
         # Adicionar colunas de Ano, Mês e Métricas de Negócio (Desconto, Receita Líquida, Margem)
