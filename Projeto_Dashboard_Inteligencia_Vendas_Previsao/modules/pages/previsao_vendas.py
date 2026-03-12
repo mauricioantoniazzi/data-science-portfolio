@@ -7,7 +7,7 @@ from prophet import Prophet
 from prophet.plot import plot_plotly
 
 
-def render_item4(df, filters):
+def render_previsao_vendas(df, filters):
     """
     Renderiza o Item 4: Previsão de Vendas usando Prophet
     

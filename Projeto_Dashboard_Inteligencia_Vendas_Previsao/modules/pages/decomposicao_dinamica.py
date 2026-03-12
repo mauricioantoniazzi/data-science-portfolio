@@ -6,9 +6,9 @@ import streamlit as st
 import plotly.express as px
 
 
-def render_item3(df, filters, dimensions_list):
+def render_decomposicao_dinamica(df, filters, dimensions_list):
     """
-    Renderiza o Item 3: Decomposição Dinâmica com Treemap Interativo
+    Decomposição Dinâmica com Treemap Interativo
     
     Args:
         df: DataFrame filtrado de vendas
@@ -19,7 +19,7 @@ def render_item3(df, filters, dimensions_list):
     selected_years = filters['years']
     selected_measure = filters['measure']
     
-    st.header(f"Item 3: Decomposição Dinâmica (Treemap) | Anos: {', '.join(map(str, selected_years))}")
+    st.header(f"Decomposição Dinâmica (Treemap) | Anos: {', '.join(map(str, selected_years))}")
     st.markdown("---")
 
     if not selected_years:

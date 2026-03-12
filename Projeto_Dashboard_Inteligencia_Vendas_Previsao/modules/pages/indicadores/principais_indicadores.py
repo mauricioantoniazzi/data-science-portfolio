@@ -8,7 +8,7 @@ from modules.pages.indicadores.negocio.curva_abc import render_curva_abc
 from modules.pages.indicadores.negocio.saude_cliente import render_saude_cliente
 from modules.pages.indicadores.negocio.mix_canal import render_mix_canal
 
-def render_item1(df, filters):
+def render_principais_indicadores(df, filters):
     st.title("🚀 Inteligência de Vendas")
 
     # Criação das Abas para organizar as perguntas de negócio

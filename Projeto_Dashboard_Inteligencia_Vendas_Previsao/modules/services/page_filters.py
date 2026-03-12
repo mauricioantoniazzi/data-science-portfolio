@@ -4,8 +4,8 @@
 # Este arquivo centraliza a lógica de criação de filtros para cada página
 
 import streamlit as st
-from modules.db_connector import get_distinct_values
-from modules.config import MEDIDAS_KPI
+from modules.core.db_connector import get_distinct_values
+from modules.core.config import MEDIDAS_KPI
 
 
 def setup_item1_filters(df):

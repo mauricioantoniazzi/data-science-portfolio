@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-from modules.db_connector import run_query
+from modules.core.db_connector import run_query
 
 def render_curva_abc():
   st.subheader("Análise de Pareto (Curva ABC)")

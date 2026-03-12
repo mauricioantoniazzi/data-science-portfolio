@@ -1,9 +1,9 @@
 import streamlit as st
 
 # Importações de Dados e Configuração
-from modules.db_connector import load_data
-from modules.config import PAGE_CONFIG, CUSTOM_CSS, DIMENSIONS_TREEMAP
-from modules.page_filters import (
+from modules.core.db_connector import load_data
+from modules.core.config import PAGE_CONFIG, CUSTOM_CSS, DIMENSIONS_TREEMAP
+from modules.services.page_filters import (
     setup_item1_filters,
     setup_item2_filters,
     setup_item3_filters,
@@ -11,10 +11,10 @@ from modules.page_filters import (
 )
 
 # Importações de Páginas
-from modules.pages.indicadores.tab_indicadores import render_item1
-from modules.pages.item2_arvore import render_item2
-from modules.pages.item3_treemap import render_item3
-from modules.pages.item4_previsao import render_item4
+from modules.pages.indicadores.principais_indicadores import render_principais_indicadores
+from modules.pages.decomposicao_arvore_hierarquica import render_decomposicao_arvore_hierarquica
+from modules.pages.decomposicao_dinamica import render_decomposicao_dinamica
+from modules.pages.previsao_vendas import render_previsao_vendas
 
 # ==============================================================================
 # CONFIGURAÇÃO INICIAL DO STREAMLIT
@@ -65,7 +65,7 @@ if menu_selection == "Principais Indicadores":
     filters = setup_item1_filters(df_vendas)
     
     # Renderizar página
-    render_item1(df_vendas, filters)
+    render_principais_indicadores(df_vendas, filters)
 
 elif menu_selection == "Decomposição (Árvore Hierárquica)":
     
@@ -73,7 +73,7 @@ elif menu_selection == "Decomposição (Árvore Hierárquica)":
     filters = setup_item2_filters(df_vendas)
     
     # Renderizar página
-    render_item2(df_vendas, filters)
+    render_decomposicao_arvore_hierarquica(df_vendas, filters)
 
 elif menu_selection == "Decomposição Dinâmica (Treemap)":
     
@@ -88,7 +88,7 @@ elif menu_selection == "Decomposição Dinâmica (Treemap)":
     ].copy()
     
     # Renderizar página
-    render_item3(df_vendas_filtered, filters, DIMENSIONS_TREEMAP)
+    render_decomposicao_dinamica(df_vendas_filtered, filters, DIMENSIONS_TREEMAP)
 
 elif menu_selection == "Previsão (Forecasting)":
     
@@ -96,4 +96,4 @@ elif menu_selection == "Previsão (Forecasting)":
     filters = setup_item4_filters(df_vendas)
     
     # Renderizar página
-    render_item4(df_vendas, filters)
+    render_previsao_vendas(df_vendas, filters)

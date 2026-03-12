@@ -6,9 +6,9 @@ import streamlit as st
 import plotly.express as px
 
 
-def render_item2(df, filters):
+def render_decomposicao_arvore_hierarquica(df, filters):
     """
-    Renderiza o Item 2: Decomposição em Árvore Hierárquica
+    Decomposição em Árvore Hierárquica
     
     Args:
         df: DataFrame completo de vendas

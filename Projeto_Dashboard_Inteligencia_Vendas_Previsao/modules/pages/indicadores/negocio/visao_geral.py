@@ -1,7 +1,7 @@
 import streamlit as st
-from modules.kpi_calculations import apply_filters, calculate_kpis, get_hierarchical_data, get_subcat_data
-from modules.ui_components import render_kpi_card, render_summary_table, format_currency
-from modules.chart_functions import create_sparkline, create_pie_chart, create_bar_chart, create_line_chart
+from modules.services.kpi_calculations import apply_filters, calculate_kpis, get_hierarchical_data, get_subcat_data
+from modules.ui.ui_components import render_kpi_card, render_summary_table, format_currency
+from modules.ui.chart_functions import create_sparkline, create_pie_chart, create_bar_chart, create_line_chart
 
 def render_visao_geral(df, filters):
     year = filters['year']
