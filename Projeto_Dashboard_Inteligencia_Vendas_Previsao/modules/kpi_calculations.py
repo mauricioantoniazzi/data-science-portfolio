@@ -99,3 +99,25 @@ def calculate_kpis(df_filtered, target_year, measure):
         'yoy': yoy_fmt,
         'yoy_delta': yoy_rounded # Retorna o valor numérico para a cor do delta
     }
+
+def get_hierarchical_data(df_compare, measure, year):
+    """Gera a estrutura de dados para a tabela hierárquica."""
+    col_curr = year
+    col_prev = year - 1
+    
+    # Agrupamento por Categoria
+    df_cat = df_compare.groupby(['Categoria', 'Ano'])[measure].sum().reset_index()
+    df_cat = df_cat.pivot(index='Categoria', columns='Ano', values=measure).fillna(0).reset_index()
+    df_cat = df_cat.rename(columns={col_curr: 'val_curr', col_prev: 'val_prev'})
+    
+    total_sales = df_cat['val_curr'].sum()
+    df_cat['contribution'] = df_cat['val_curr'] / total_sales if total_sales > 0 else 0
+    
+    return df_cat.sort_values(by='val_curr', ascending=False)
+
+def get_subcat_data(df_compare, category, measure, year):
+    """Gera dados de subcategoria para uma categoria específica."""
+    df_sub = df_compare[df_compare['Categoria'] == category]
+    df_sub = df_sub.groupby(['Subcategoria', 'Ano'])[measure].sum().reset_index()
+    df_sub = df_sub.pivot(index='Subcategoria', columns='Ano', values=measure).fillna(0).reset_index()
+    return df_sub.rename(columns={year: 'val_curr', year-1: 'val_prev'})
