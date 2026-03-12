@@ -85,7 +85,6 @@ def load_data():
         st.error(f"Erro ao executar a consulta: {e}")
         return pd.DataFrame()
 
-
 # Obter valores distintos para filtros
 @st.cache_data(ttl=3600)
 def get_distinct_values(df, column_name):
@@ -94,6 +93,20 @@ def get_distinct_values(df, column_name):
         return []
     return sorted(df[column_name].unique())
 
+def run_query(query):
+    """Executa uma consulta SQL genérica e retorna um DataFrame."""
+    conn = get_db_connection() # Reutiliza a função de conexão com cache
+    if conn is None:
+        return pd.DataFrame()
+    
+    try:
+        # Usa o pandas para ler a query diretamente da conexão
+        df = pd.read_sql(query, conn)
+        return df
+    except Exception as e:
+        st.error(f"Erro ao executar a consulta estratégica: {e}")
+        return pd.DataFrame()
+    
 if __name__ == '__main__':
     # Teste de conexão (executado apenas se o script for rodado diretamente)
     print("Testando conexão e carregamento de dados...")

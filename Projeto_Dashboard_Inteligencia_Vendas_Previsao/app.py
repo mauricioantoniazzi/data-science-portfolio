@@ -11,7 +11,7 @@ from modules.page_filters import (
 )
 
 # Importações de Páginas
-from modules.pages.item1_indicadores import render_item1
+from modules.pages.indicadores.tab_indicadores import render_item1
 from modules.pages.item2_arvore import render_item2
 from modules.pages.item3_treemap import render_item3
 from modules.pages.item4_previsao import render_item4
