@@ -3,10 +3,10 @@
 # ==============================================================================
 
 import streamlit as st
-from modules.pages.indicadores.negocio.visao_geral import render_visao_geral
-from modules.pages.indicadores.negocio.curva_abc import render_curva_abc
-from modules.pages.indicadores.negocio.saude_cliente import render_saude_cliente
-from modules.pages.indicadores.negocio.mix_canal import render_mix_canal
+from modules.pages.insights.visao_geral import render_visao_geral
+from modules.pages.insights.curva_abc import render_curva_abc
+from modules.pages.insights.saude_cliente import render_saude_cliente
+from modules.pages.insights.mix_canal import render_mix_canal
 
 def render_principais_indicadores(df, filters):
     st.title("🚀 Inteligência de Vendas")

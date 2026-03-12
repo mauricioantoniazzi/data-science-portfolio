@@ -11,7 +11,7 @@ from modules.services.page_filters import (
 )
 
 # Importações de Páginas
-from modules.pages.indicadores.principais_indicadores import render_principais_indicadores
+from modules.pages.principais_indicadores import render_principais_indicadores
 from modules.pages.decomposicao_arvore_hierarquica import render_decomposicao_arvore_hierarquica
 from modules.pages.decomposicao_dinamica import render_decomposicao_dinamica
 from modules.pages.previsao_vendas import render_previsao_vendas
