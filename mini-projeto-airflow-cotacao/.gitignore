@@ -1,0 +1,39 @@
+# --- Airflow & Docker Local Data ---
+# Ignorar as pastas de logs e plugins geradas localmente
+logs/
+plugins/
+airflow.db
+standalone_admin_password.txt
+
+# --- Environment Variables (SECURITY) ---
+# Nunca suba suas senhas e chaves de API
+.env
+
+# --- Python ---
+# Ignorar caches do Python e ambientes virtuais
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env/
+build/
+dist/
+*.egg-info/
+
+# --- Database Data (Se você mapeou pastas locais em vez de volumes nomeados) ---
+# Se o seu postgres salvar em uma pasta local, ignore-a:
+# postgres_data/
+
+# --- OS & IDEs ---
+# Arquivos de sistema e pastas de editores
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Docker ---
+# Ignorar arquivos de log do docker se houver
+*.log
