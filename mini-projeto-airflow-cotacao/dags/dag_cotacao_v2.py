@@ -18,7 +18,7 @@ def pipeline_v2():
         query = """
             CREATE TABLE IF NOT EXISTS staging_cotacoes (
                 moeda VARCHAR(10),
-                valor_bid DECIMAL(10, 4),
+                valor DECIMAL(10, 4),
                 data_cotacao TIMESTAMP,
                 data_processamento TIMESTAMP
             );
