@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: cotacao_raw
+    database: airflow
+    schema: public
+    tables:
+      - name: staging_cotacoes
