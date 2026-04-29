@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: dim_moedas
+    columns:
+      - name: sk_moeda
+        tests:
+          - unique
+          - not_null
+      - name: codigo_moeda
+        tests:
+          - not_null
+
+  - name: fct_cotacoes
+    columns:
+      - name: sk_cotacao
+        tests:
+          - unique
+          - not_null
+      - name: fk_moeda
+        tests:
+          - relationships:
+              to: ref('dim_moedas')
+              field: sk_moeda
